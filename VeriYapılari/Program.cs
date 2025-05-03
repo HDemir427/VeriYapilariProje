@@ -11,7 +11,7 @@ namespace VeriYapılari
         static void Main(string[] args)
         {
             // Kullanıcı tarihçesi oluştur
-            UserHistory userHistory = new UserHistory(); git log --oneline
+            UserHistory userHistory = new UserHistory();
 
             // Örnek veriler ekle
             userHistory.AddAction("Ürün görüntülendi: Laptop");
