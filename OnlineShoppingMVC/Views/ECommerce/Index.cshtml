@@ -1,0 +1,387 @@
+﻿@model ECommerceViewModel
+@{
+    ViewData["Title"] = "E-Commerce Data Structures Visualization";
+}
+
+<div class="container">
+    <h1 class="text-center mb-4">E-Commerce Data Structures Visualization</h1>
+    
+    <!-- Navigation Tabs -->
+    <ul class="nav nav-tabs mb-4">
+        <li class="nav-item">
+            <a class="nav-link @(Model.ActiveTab == "products" ? "active" : "")" 
+               href="@Url.Action("ChangeTab", "ECommerce", new { tab = "products" })">
+                Product Catalog (Hash Table)
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @(Model.ActiveTab == "cart" ? "active" : "")" 
+               href="@Url.Action("ChangeTab", "ECommerce", new { tab = "cart" })">
+                Shopping Cart
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @(Model.ActiveTab == "orders" ? "active" : "")" 
+               href="@Url.Action("ChangeTab", "ECommerce", new { tab = "orders" })">
+                Order Queue
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @(Model.ActiveTab == "history" ? "active" : "")" 
+               href="@Url.Action("ChangeTab", "ECommerce", new { tab = "history" })">
+                User History (Linked List)
+            </a>
+        </li>
+    </ul>
+    
+    <!-- Products View (Hash Table) -->
+    @if (Model.ActiveTab == "products")
+    {
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <!-- Category Filter (Tree Structure) -->
+                        <form method="get" action="@Url.Action("FilterProducts", "ECommerce")" class="form-inline">
+                            <div class="form-group">
+                                <label class="mr-2">Filter by Category:</label>
+                                <select name="category" class="form-control" onchange="this.form.submit()">
+                                    @foreach (var category in Model.Categories)
+                                    {
+                                        <option value="@category"
+                                                selected="@(Model.SelectedCategory == category ? "selected" : null)">
+                                            @category
+                                        </option>
+                                    }
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <!-- Search (Hash Table lookup) -->
+                        <form method="get" action="@Url.Action("FilterProducts", "ECommerce")" class="form-inline">
+                            <input type="hidden" name="category" value="@Model.SelectedCategory" />
+                            <div class="form-group">
+                                <input type="text" name="searchQuery" class="form-control" placeholder="Search products..." value="@Model.SearchQuery" />
+                                <button type="submit" class="btn btn-primary ml-2">Search</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    @foreach (var product in Model.Products)
+                    {
+                        <div class="col-md-4 mb-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">@product.Name</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">@product.Category</h6>
+                                    <p class="card-text">
+                                        <strong>Price:</strong> $@product.Price.ToString("F2")<br />
+                                        <strong>In Stock:</strong> @product.Stock
+                                    </p>
+                                    <form method="post" action="@Url.Action("AddToCart", "ECommerce")">
+                                        <input type="hidden" name="productId" value="@product.Id" />
+                                        <button type="submit" class="btn btn-primary">Add to Cart</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                
+                <!-- Visualization of Hash Table structure -->
+                <div class="mt-4">
+                    <h4>Hash Table Visualization</h4>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Hash Key (ID)</th>
+                                    <th>Value (Product)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var product in Model.Products)
+                                {
+                                    <tr>
+                                        <td>@product.Id</td>
+                                        <td>
+                                            <div class="d-flex justify-content-between">
+                                                <span>@product.Name (@product.Category)</span>
+                                                <span>$@product.Price.ToString("F2")</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    
+    <!-- Shopping Cart -->
+    @if (Model.ActiveTab == "cart")
+    {
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Shopping Cart</h4>
+                
+                @if (Model.Cart.Count == 0)
+                {
+                    <p>Your cart is empty.</p>
+                }
+                else
+                {
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Cart)
+                                {
+                                    <tr>
+                                        <td>@item.Product.Name</td>
+                                        <td>$@item.Product.Price.ToString("F2")</td>
+                                        <td>@item.Quantity</td>
+                                        <td>$@((item.Product.Price * item.Quantity).ToString("F2"))</td>
+                                    </tr>
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th colspan="3" class="text-right">Total:</th>
+                                    <th>$@Model.Cart.Sum(c => c.Product.Price * c.Quantity).ToString("F2")</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    
+                    <form method="post" action="@Url.Action("PlaceOrder", "ECommerce")">
+                        <button type="submit" class="btn btn-success">Place Order</button>
+                    </form>
+                }
+            </div>
+        </div>
+    }
+    
+    <!-- Orders Queue -->
+    @if (Model.ActiveTab == "orders")
+    {
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h4 class="card-title mb-0">Order Queue</h4>
+                    <form method="post" action="@Url.Action("ProcessNextOrder", "ECommerce")">
+                        <button type="submit" class="btn btn-primary" @(Model.Orders.Count == 0 ? "disabled" : "")>
+                            Process Next Order
+                        </button>
+                    </form>
+                </div>
+                
+                @if (Model.Orders.Count == 0)
+                {
+                    <p>No orders in the queue.</p>
+                }
+                else
+                {
+                    <div class="row">
+                        @for (int i = 0; i < Model.Orders.Count; i++)
+                        {
+                            var order = Model.Orders[i];
+                            string bgClass = order.Status == "Pending" ? "bg-warning" : 
+                                            order.Status == "Processing" ? "bg-info" : "bg-success";
+                            
+                            <div class="col-md-4 mb-3">
+                                <div class="card @bgClass text-white">
+                                    <div class="card-header d-flex justify-content-between">
+                                        <span>Order #@order.Id</span>
+                                        <span class="badge badge-light">@order.Status</span>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Items: @order.Items.Count</p>
+                                        <p>Total: $@order.Total.ToString("F2")</p>
+                                        <p class="small">Placed at: @order.Timestamp.ToString("HH:mm:ss")</p>
+                                        
+                                        <!-- Visualization of queue position -->
+                                        <div class="mt-2 small">
+                                            Queue Position: @(i == 0 ? "Next to be processed" : $"{i + 1} in line")
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    
+                    <!-- Queue visualization -->
+                    <div class="mt-4">
+                        <h5>Queue Structure Visualization</h5>
+                        <div class="d-flex overflow-auto p-3 bg-light border">
+                            <div class="mr-3 text-center">
+                                <div class="font-weight-bold">Front</div>
+                                <div>↓</div>
+                            </div>
+                            
+                            @foreach (var order in Model.Orders)
+                            {
+                                string borderClass = order.Status == "Pending" ? "border-warning" : 
+                                                    order.Status == "Processing" ? "border-info" : "border-success";
+                                
+                                <div class="card mr-2 @borderClass" style="min-width: 150px;">
+                                    <div class="card-body p-2">
+                                        <div class="small">Order #@order.Id</div>
+                                        <div class="small">@order.Status</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex align-items-center mr-2">→</div>
+                            }
+                            
+                            <div class="text-center">
+                                <div class="font-weight-bold">Back</div>
+                                <div>↑</div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+    
+    <!-- User History (Linked List) -->
+    @if (Model.ActiveTab == "history")
+    {
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">User Activity History</h4>
+                
+                @{
+                    var userHistory = new List<UserActivity>();
+                    var current = Model.UserHistoryHead;
+                    while (current != null)
+                    {
+                        userHistory.Add(current);
+                        current = current.Next;
+                    }
+                }
+                
+                @if (userHistory.Count == 0)
+                {
+                    <p>No activity yet.</p>
+                }
+                else
+                {
+                    <div class="timeline">
+                        @foreach (var activity in userHistory)
+                        {
+                            <div class="timeline-item">
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <div class="timeline-date">@activity.Timestamp.ToString("HH:mm:ss")</div>
+                                    <h5>@activity.Action</h5>
+                                    <p>@activity.ProductName</p>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    
+                    <!-- Linked List Visualization -->
+                    <div class="mt-4">
+                        <h5>Linked List Structure Visualization</h5>
+                        <div class="d-flex overflow-auto p-3 bg-light border">
+                            <div class="mr-3 text-center">
+                                <div class="font-weight-bold">Head</div>
+                                <div>↓</div>
+                            </div>
+                            
+                            @for (int i = 0; i < userHistory.Count; i++)
+                            {
+                                var activity = userHistory[i];
+                                
+                                <div class="card mr-2" style="min-width: 150px;">
+                                    <div class="card-body p-2">
+                                        <div class="small font-weight-bold">Node @(i+1)</div>
+                                        <div class="small">@activity.Action</div>
+                                        <div class="small text-muted">@activity.ProductName</div>
+                                    </div>
+                                </div>
+                                
+                                @if (i < userHistory.Count - 1)
+                                {
+                                    <div class="d-flex align-items-center mr-2">
+                                        <div>→ Next</div>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="d-flex align-items-center">
+                                        <div>→ NULL</div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+    /* Timeline styles for Linked List visualization */
+    .timeline {
+        position: relative;
+        padding: 20px 0;
+        margin-left: 20px;
+    }
+    
+    .timeline:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 18px;
+        height: 100%;
+        width: 2px;
+        background: #ddd;
+    }
+    
+    .timeline-item {
+        position: relative;
+        margin-bottom: 30px;
+    }
+    
+    .timeline-marker {
+        position: absolute;
+        top: 0;
+        left: -20px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #007bff;
+        border: 2px solid #fff;
+        z-index: 1;
+    }
+    
+    .timeline-content {
+        margin-left: 20px;
+        background: #f8f9fa;
+        padding: 15px;
+        border-radius: 5px;
+        position: relative;
+    }
+    
+    .timeline-date {
+        font-size: 0.8rem;
+        color: #6c757d;
+        margin-bottom: 5px;
+    }
+</style>
