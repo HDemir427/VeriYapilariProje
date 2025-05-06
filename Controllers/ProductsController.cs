@@ -37,7 +37,21 @@ namespace OrderManagementSystem.Controllers
                 return NotFound();
             }
         }
+        [HttpGet("search/{keyword}")]
+        public IActionResult Search(string keyword) => Ok(_service.Search(keyword));
 
+        [HttpGet("category/{name}")]
+        public IActionResult GetByCategory(string name) => Ok(_service.GetByCategory(name));
+
+        [HttpPost("orders")]
+        public IActionResult CreateOrder(Order order)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+        
+            _service.ProcessOrder(order);
+            return Accepted();
+        }
 
     }
 }
