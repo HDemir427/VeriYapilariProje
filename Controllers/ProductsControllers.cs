@@ -1,7 +1,7 @@
 
 ﻿using Microsoft.AspNetCore.Mvc;
 using OrderManagementSystem.Data.Entity;
-using OrderManagementSystem.Data.Services;
+using OrderManagementSystem.Services;
 namespace OrderManagementSystem.Controllers
 {
     [ApiController]
