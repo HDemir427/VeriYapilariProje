@@ -18,7 +18,7 @@ namespace OrderManagementSystem.Controllers
             try
             {
                 _service.AddProduct(product);
-                return Created($"/products/{product.Id}", product);
+                return Created($"/products/{product.ProductId}", product);
             }
             catch (ArgumentException ex)
             {

@@ -1,110 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\",
+  "WorkspaceRootPath": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyap\u0131lariSonhali\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyap\u0131larisonhali\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyap\u0131larisonhali\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyap\u0131larisonhali\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\migrations\\20250502192753_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:migrations\\20250502192753_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\mapping\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\entity\\userhistory .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\entity\\userhistory .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\entity\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\entity\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\entity\\orderqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\entity\\orderqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\entity\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\entity\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\entity\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\entity\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\entity\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyap\u0131larisonhali\\data\\entity\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\entity\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\dtos\\userregisterdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyap\u0131larisonhali\\controllers\\productscontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:controllers\\productscontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\dtos\\userhistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\dtos\\userhistorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyap\u0131larisonhali\\data\\entity\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\entity\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\dtos\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\dtos\\orderqueuedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\dtos\\orderqueuedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\dtos\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\dtos\\orderitemdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\dtos\\categorydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\configurations\\userhistoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\configurations\\userhistoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\configurations\\userconfiguration .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\configurations\\userconfiguration .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\configurations\\productconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\configurations\\productconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\configurations\\orderqueueconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\configurations\\orderqueueconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\configurations\\orderitemconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\configurations\\orderitemconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\configurations\\orderconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\configurations\\orderconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\ordermanagementsystem\\data\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\configurations\\categoryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyap\u0131larisonhali\\utilities\\customavltree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:utilities\\customavltree.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -114,345 +38,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:52:26.387Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "20250502192753_InitialCreate.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Migrations\\20250502192753_InitialCreate.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250502192753_InitialCreate.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Migrations\\20250502192753_InitialCreate.cs",
-              "RelativeToolTip": "Migrations\\20250502192753_InitialCreate.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyap\u0131lariSonhali\\Services\\IProductService.cs",
+              "RelativeDocumentMoniker": "Services\\IProductService.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyap\u0131lariSonhali\\Services\\IProductService.cs",
+              "RelativeToolTip": "Services\\IProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:52:24.825Z",
+              "WhenOpened": "2025-05-09T18:13:25.104Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MappingProfile.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Mapping\\MappingProfile.cs",
-              "RelativeDocumentMoniker": "Data\\Mapping\\MappingProfile.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Mapping\\MappingProfile.cs",
-              "RelativeToolTip": "Data\\Mapping\\MappingProfile.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:52:23.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserHistory .cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Entity\\UserHistory .cs",
-              "RelativeDocumentMoniker": "Data\\Entity\\UserHistory .cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Entity\\UserHistory .cs",
-              "RelativeToolTip": "Data\\Entity\\UserHistory .cs",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyap\u0131lariSonhali\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyap\u0131lariSonhali\\Program.cs",
+              "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:52:13.712Z",
+              "WhenOpened": "2025-05-09T18:13:20.013Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Entity\\User.cs",
-              "RelativeDocumentMoniker": "Data\\Entity\\User.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Entity\\User.cs",
-              "RelativeToolTip": "Data\\Entity\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ProductsControllers.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyap\u0131lariSonhali\\Controllers\\ProductsControllers.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProductsControllers.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyap\u0131lariSonhali\\Controllers\\ProductsControllers.cs",
+              "RelativeToolTip": "Controllers\\ProductsControllers.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAowBIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:52:12.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T18:08:24.217Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Entity\\Product.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyap\u0131lariSonhali\\Data\\Entity\\Product.cs",
               "RelativeDocumentMoniker": "Data\\Entity\\Product.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Entity\\Product.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyap\u0131lariSonhali\\Data\\Entity\\Product.cs",
               "RelativeToolTip": "Data\\Entity\\Product.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:52:11.552Z",
+              "WhenOpened": "2025-05-09T17:46:18.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyap\u0131lariSonhali\\Data\\Entity\\Category.cs",
+              "RelativeDocumentMoniker": "Data\\Entity\\Category.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyap\u0131lariSonhali\\Data\\Entity\\Category.cs",
+              "RelativeToolTip": "Data\\Entity\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBQAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T17:33:06.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyap\u0131lariSonhali\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyap\u0131lariSonhali\\Services\\ProductService.cs",
+              "RelativeToolTip": "Services\\ProductService.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAUwAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T17:24:02.995Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "OrderQueue.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Entity\\OrderQueue.cs",
-              "RelativeDocumentMoniker": "Data\\Entity\\OrderQueue.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Entity\\OrderQueue.cs",
-              "RelativeToolTip": "Data\\Entity\\OrderQueue.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "CustomAvlTree.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyap\u0131lariSonhali\\Utilities\\CustomAvlTree.cs",
+              "RelativeDocumentMoniker": "Utilities\\CustomAvlTree.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyap\u0131lariSonhali\\Utilities\\CustomAvlTree.cs",
+              "RelativeToolTip": "Utilities\\CustomAvlTree.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAkwEsAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:52:10.081Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "OrderItem.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Entity\\OrderItem.cs",
-              "RelativeDocumentMoniker": "Data\\Entity\\OrderItem.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Entity\\OrderItem.cs",
-              "RelativeToolTip": "Data\\Entity\\OrderItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:52:09.24Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Entity\\Order.cs",
-              "RelativeDocumentMoniker": "Data\\Entity\\Order.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Entity\\Order.cs",
-              "RelativeToolTip": "Data\\Entity\\Order.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:52:07.276Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Entity\\Category.cs",
-              "RelativeDocumentMoniker": "Data\\Entity\\Category.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Entity\\Category.cs",
-              "RelativeToolTip": "Data\\Entity\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:52:05.608Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserRegisterDto.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Dtos\\UserRegisterDto.cs",
-              "RelativeDocumentMoniker": "Data\\Dtos\\UserRegisterDto.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Dtos\\UserRegisterDto.cs",
-              "RelativeToolTip": "Data\\Dtos\\UserRegisterDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:52:04.487Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "UserHistoryDto.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Dtos\\UserHistoryDto.cs",
-              "RelativeDocumentMoniker": "Data\\Dtos\\UserHistoryDto.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Dtos\\UserHistoryDto.cs",
-              "RelativeToolTip": "Data\\Dtos\\UserHistoryDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:52:03.383Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserLoginDto.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Dtos\\UserLoginDto.cs",
-              "RelativeDocumentMoniker": "Data\\Dtos\\UserLoginDto.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Dtos\\UserLoginDto.cs",
-              "RelativeToolTip": "Data\\Dtos\\UserLoginDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:52:02.719Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Dtos\\UserDto.cs",
-              "RelativeDocumentMoniker": "Data\\Dtos\\UserDto.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Dtos\\UserDto.cs",
-              "RelativeToolTip": "Data\\Dtos\\UserDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:52:01.696Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ProductDto.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Dtos\\ProductDto.cs",
-              "RelativeDocumentMoniker": "Data\\Dtos\\ProductDto.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Dtos\\ProductDto.cs",
-              "RelativeToolTip": "Data\\Dtos\\ProductDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:52:01.032Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "OrderQueueDto.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Dtos\\OrderQueueDto.cs",
-              "RelativeDocumentMoniker": "Data\\Dtos\\OrderQueueDto.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Dtos\\OrderQueueDto.cs",
-              "RelativeToolTip": "Data\\Dtos\\OrderQueueDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:51:59.976Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "OrderItemDto.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Dtos\\OrderItemDto.cs",
-              "RelativeDocumentMoniker": "Data\\Dtos\\OrderItemDto.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Dtos\\OrderItemDto.cs",
-              "RelativeToolTip": "Data\\Dtos\\OrderItemDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:51:59.303Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "OrderDto.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Dtos\\OrderDto.cs",
-              "RelativeDocumentMoniker": "Data\\Dtos\\OrderDto.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Dtos\\OrderDto.cs",
-              "RelativeToolTip": "Data\\Dtos\\OrderDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:51:58.328Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CategoryDto.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Dtos\\CategoryDto.cs",
-              "RelativeDocumentMoniker": "Data\\Dtos\\CategoryDto.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Dtos\\CategoryDto.cs",
-              "RelativeToolTip": "Data\\Dtos\\CategoryDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:51:57.575Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "UserHistoryConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Configurations\\UserHistoryConfiguration.cs",
-              "RelativeDocumentMoniker": "Data\\Configurations\\UserHistoryConfiguration.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Configurations\\UserHistoryConfiguration.cs",
-              "RelativeToolTip": "Data\\Configurations\\UserHistoryConfiguration.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:51:55.392Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "UserConfiguration .cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Configurations\\UserConfiguration .cs",
-              "RelativeDocumentMoniker": "Data\\Configurations\\UserConfiguration .cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Configurations\\UserConfiguration .cs",
-              "RelativeToolTip": "Data\\Configurations\\UserConfiguration .cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:51:54.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ProductConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Configurations\\ProductConfiguration.cs",
-              "RelativeDocumentMoniker": "Data\\Configurations\\ProductConfiguration.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Configurations\\ProductConfiguration.cs",
-              "RelativeToolTip": "Data\\Configurations\\ProductConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:51:52.863Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "OrderQueueConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Configurations\\OrderQueueConfiguration.cs",
-              "RelativeDocumentMoniker": "Data\\Configurations\\OrderQueueConfiguration.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Configurations\\OrderQueueConfiguration.cs",
-              "RelativeToolTip": "Data\\Configurations\\OrderQueueConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:51:51.361Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "OrderItemConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Configurations\\OrderItemConfiguration.cs",
-              "RelativeDocumentMoniker": "Data\\Configurations\\OrderItemConfiguration.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Configurations\\OrderItemConfiguration.cs",
-              "RelativeToolTip": "Data\\Configurations\\OrderItemConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:51:43.279Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "OrderConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Configurations\\OrderConfiguration.cs",
-              "RelativeDocumentMoniker": "Data\\Configurations\\OrderConfiguration.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Configurations\\OrderConfiguration.cs",
-              "RelativeToolTip": "Data\\Configurations\\OrderConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:51:42.137Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "CategoryConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Configurations\\CategoryConfiguration.cs",
-              "RelativeDocumentMoniker": "Data\\Configurations\\CategoryConfiguration.cs",
-              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\OrderManagementSystem\\Data\\Configurations\\CategoryConfiguration.cs",
-              "RelativeToolTip": "Data\\Configurations\\CategoryConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T14:51:40.576Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T17:05:12.878Z"
             }
           ]
         },

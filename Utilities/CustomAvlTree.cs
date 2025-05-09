@@ -1,6 +1,8 @@
 ﻿using OrderManagementSystem.Data.Entity;
+using OrderManagementSystem.Services;
 
 namespace OrderManagementSystem.Utilities;
+
 
 public class CustomAvlTree<T> where T : IComparable<T>
 {
@@ -61,17 +63,21 @@ public class CustomAvlTree<T> where T : IComparable<T>
         };
     }
 
- 
+    // bu fonksiyonda değişiklik yaptım 
     public List<Product> SearchCategory(string categoryName)
     {
+        if (typeof(T) != typeof(Category))
+            throw new InvalidOperationException("SearchCategory only works when T is Category.");
+
         lock (_lock)
         {
-            var category = Find(new Category { Name = categoryName });
-            return category?.Products ?? new List<Product>();
+            var category = Find((T)(object)new Category { Name = categoryName });
+            var categoryEntity = category as Category;
+            return categoryEntity?.Products?.ToList() ?? new List<Product>();
         }
     }
 
-  
+
     private int Height(AvlNode node) => node?.Height ?? 0;
 
     private AvlNode Rebalance(AvlNode node)

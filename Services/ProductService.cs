@@ -21,8 +21,8 @@ public class ProductService : IProductService
 
     public void AddProduct(Product product)
     {
-        _products.Add(product.ProductId, product);
-        var category = new Category { Name = product.Category };
+        _products.Add(product.ProductId.ToString(), product); // buraya Tostring ekledim
+        var category =  product.Category ; // buradaki new Categoryi kaldırdım şu an zaten bir class döndürüyor
         var existingCategory = _categories.Find(category);
         if (existingCategory != null)
             existingCategory.Products.Add(product);
