@@ -8,13 +8,13 @@ namespace OrderManagementSystem.Data.Configurations
     {
         public void Configure(EntityTypeBuilder<OrderItem> builder)
         {
-            // Tablo adı ve şema
+          
             builder.ToTable("OrderItems", "order");
 
             // Primary Key
             builder.HasKey(oi => oi.OrderItemId);
 
-            // Alan kısıtlamaları
+          
             builder.Property(oi => oi.OrderId)
                    .IsRequired();
 
@@ -29,7 +29,7 @@ namespace OrderManagementSystem.Data.Configurations
                    .IsRequired()
                    .HasColumnType("decimal(18,2)");
 
-            // İlişkiler
+            
             builder.HasOne(oi => oi.Order)
                    .WithMany(o => o.OrderItems)
                    .HasForeignKey(oi => oi.OrderId)

@@ -1,9 +1,10 @@
-using OrderManagementSystem.Data.
+using OrderManagementSystem.Data;
 using AutoMapper;
+using OrderManagementSystem.Mapping;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// AutoMapper servisini ekle
+
 builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 var app = builder.Build();

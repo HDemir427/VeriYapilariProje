@@ -166,3 +166,4 @@ C:\Users\pekta\Desktop\CALISMALAR\C#\OrderManagementSystem\obj\Debug\net8.0\refi
 C:\Users\pekta\Desktop\CALISMALAR\C#\OrderManagementSystem\obj\Debug\net8.0\OrderManagementSystem.pdb
 C:\Users\pekta\Desktop\CALISMALAR\C#\OrderManagementSystem\obj\Debug\net8.0\OrderManagementSystem.genruntimeconfig.cache
 C:\Users\pekta\Desktop\CALISMALAR\C#\OrderManagementSystem\obj\Debug\net8.0\ref\OrderManagementSystem.dll
+C:\Users\pekta\Desktop\CALISMALAR\C#\OrderManagementSystem\bin\Debug\net8.0\AutoMapper.dll
