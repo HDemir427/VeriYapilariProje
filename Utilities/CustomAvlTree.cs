@@ -35,7 +35,7 @@ public class CustomAvlTree<T> where T : IComparable<T>
         else if (compareResult > 0)
             node.Right = Insert(node.Right, value);
         else
-            return node; // Duplicate values not allowed
+            return node; 
 
         node.Height = 1 + Math.Max(Height(node.Left), Height(node.Right));
         return Rebalance(node);
@@ -61,6 +61,20 @@ public class CustomAvlTree<T> where T : IComparable<T>
             > 0 => Find(node.Right, value),
             _ => node.Value
         };
+    }
+        public IEnumerable<T> GetAll()
+    {
+        var list = new List<T>();
+        InOrderTraversal(_root, list);
+        return list;
+    }
+
+    private void InOrderTraversal(AvlNode node, List<T> list)
+    {
+        if (node == null) return;
+        InOrderTraversal(node.Left, list);
+        list.Add(node.Value);
+        InOrderTraversal(node.Right, list);
     }
 
     // bu fonksiyonda değişiklik yaptım 
