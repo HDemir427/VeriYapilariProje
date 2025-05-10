@@ -5,7 +5,7 @@ namespace OrderManagementSystem.Services;
 public interface IProductService
 {
     void AddProduct(Product product);
-    Product GetProduct(string id);
+    Product GetProduct(int id);
     IEnumerable<Product> Search(string keyword);
     List<Product> GetByCategory(string category);
     void ProcessOrder(Order order);
