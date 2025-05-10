@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿/*
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OrderManagementSystem.Data.Context;
 using OrderManagementSystem.Data.Entity;
@@ -36,4 +37,60 @@ namespace OrderManagementSystem.Api.Controllers
         }
     }
 
+}
+*/
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using OrderManagementSystem.Data.Context;
+using OrderManagementSystem.Data.Entity;
+using OrderManagementSystem.Services;
+
+namespace OrderManagementSystem.Api.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class UserHistoryController : ControllerBase
+    {
+        private readonly IUserHistoryService _userHistoryService;
+
+        public UserHistoryController(IUserHistoryService userHistoryService)
+        {
+            _userHistoryService = userHistoryService;
+        }
+
+        [HttpPost]
+        public IActionResult AddHistory([FromBody] UserHistory history)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            try
+            {
+                _userHistoryService.AddHistory(history);
+                return Ok(new { Message = "History added successfully." });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+
+        [HttpGet("{userId}")]
+        public IActionResult GetUserHistory(int userId)
+        {
+            try
+            {
+                var history = _userHistoryService.GetUserHistory(userId);
+                return Ok(history);
+            }
+            catch (KeyNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
+        }
+    }
 }
