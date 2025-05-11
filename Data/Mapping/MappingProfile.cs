@@ -15,6 +15,7 @@ namespace OrderManagementSystem.Mapping
             CreateMap<Product, ProductDto>().ReverseMap();
             CreateMap<User, UserDto>().ReverseMap();
             CreateMap<UserHistory, UserHistoryDto>().ReverseMap();
+            CreateMap<OrderItemDto, OrderItem>().ReverseMap();
         }
     }
 }
