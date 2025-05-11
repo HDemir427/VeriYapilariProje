@@ -1,5 +1,5 @@
 ﻿using OrderManagementSystem.Data.Entity;
-
+using OrderManagementSystem.Dto;
 namespace OrderManagementSystem.Services
 {
     public interface IOrderService
