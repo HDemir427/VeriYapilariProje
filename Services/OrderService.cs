@@ -1,4 +1,5 @@
-﻿using OrderManagementSystem.Data.Entity;
+using AutoMapper;
+using OrderManagementSystem.Data.Entity;
 using OrderManagementSystem.Dto;
 using OrderManagementSystem.Utilities;
 
@@ -6,28 +7,31 @@ namespace OrderManagementSystem.Services
 {
     public class OrderService : IOrderService
     {
-        private readonly CustomQueue<Order> _orderQueue;
+        private readonly IMapper _mapper;
         private readonly CustomHashTable<int, Order> _orders;
+        private readonly CustomQueue<Order> _orderQueue;
 
-        public OrderService(CustomQueue<Order> orderQueue, CustomHashTable<int, Order> orders)
+        public OrderService(
+            IMapper mapper,
+            CustomHashTable<int, Order> orders,
+            CustomQueue<Order> orderQueue)
         {
-            _orderQueue = orderQueue;
+            _mapper = mapper;
             _orders = orders;
+            _orderQueue = orderQueue;
         }
 
         public Order CreateOrder(OrderDto orderDto)
         {
-            var order = new Order
-            {
-                UserId = orderDto.UserId,
-                TotalAmount = orderDto.OrderItems.Sum(item => item.UnitPrice * item.Quantity),
-                Status = "Pending",
-                OrderDate = DateTime.UtcNow,
-                OrderItems = orderDto.OrderItems
-            };
+
+            var order = _mapper.Map<Order>(orderDto);
+
+            order.Status = "Pending";
+            order.OrderDate = DateTime.UtcNow;
 
             _orders.Add(order.OrderId, order);
             _orderQueue.Enqueue(order);
+
             return order;
         }
 
@@ -37,7 +41,7 @@ namespace OrderManagementSystem.Services
         {
             var order = _orders.Get(orderId);
             order.Status = status;
-            _orders.Add(orderId, order);
+            _orders.Add(orderId, order); 
         }
 
         public List<Order> GetOrdersByUser(int userId)
