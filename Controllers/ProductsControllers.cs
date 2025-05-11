@@ -27,7 +27,7 @@ namespace OrderManagementSystem.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetProduct(string id)
+        public IActionResult GetProduct(int id)
         {
             try
             {
