@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopNow - Online Alışveriş Sitesi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Üst Bilgi Çubuğu -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="contact-info">
+                <a href="tel:+902121234567"><i class="fas fa-phone"></i> +90 212 123 45 67</a>
+                <a href="mailto:info@shopnow.com"><i class="fas fa-envelope"></i> info@shopnow.com</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Mağazalarımız</a>
+            </div>
+            <div class="top-links">
+                <a href="#"><i class="fas fa-truck"></i> Kargo Takip</a>
+                <a href="#"><i class="fas fa-question-circle"></i> Yardım</a>
+                <select class="language-select">
+                    <option value="tr">Türkçe</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Bölümü -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>ShopNow</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Ürün ara..." onkeyup="searchProducts()">
+                <button><i class="fas fa-search"></i></button>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="user-account">
+                    <i class="fas fa-user"></i>
+                    <span>Hesabım</span>
+                    <div class="dropdown-menu">
+                        <a href="#"><i class="fas fa-sign-in-alt"></i> Giriş Yap</a>
+                        <a href="#"><i class="fas fa-user-plus"></i> Üye Ol</a>
+                        <a href="#"><i class="fas fa-box"></i> Siparişlerim</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Adreslerim</a>
+                        <a href="#"><i class="fas fa-cog"></i> Ayarlar</a>
+                    </div>
+                </a>
+                <a href="#" class="cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Sepetim</span>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="#" class="favorites">
+                    <i class="fas fa-heart"></i>
+                    <span>Favorilerim</span>
+                    <span class="favorites-count">0</span>
+                </a>
+            </div>
+        </nav>
+        <div class="categories">
+            <div class="category-dropdown">
+                <button class="category-button">
+                    <i class="fas fa-bars"></i> Tüm Kategoriler
+                </button>
+                <div class="category-menu">
+                    <a href="#"><i class="fas fa-mobile-alt"></i> Elektronik</a>
+                    <a href="#"><i class="fas fa-tshirt"></i> Moda</a>
+                    <a href="#"><i class="fas fa-home"></i> Ev & Yaşam</a>
+                    <a href="#"><i class="fas fa-spa"></i> Kozmetik</a>
+                    <a href="#"><i class="fas fa-running"></i> Spor</a>
+                    <a href="#"><i class="fas fa-book"></i> Kitap</a>
+                    <a href="#"><i class="fas fa-baby"></i> Anne & Bebek</a>
+                    <a href="#"><i class="fas fa-gamepad"></i> Oyun & Konsol</a>
+                </div>
+            </div>
+            <a href="#" class="category-link"><i class="fas fa-mobile-alt"></i> Elektronik</a>
+            <a href="#" class="category-link"><i class="fas fa-tshirt"></i> Moda</a>
+            <a href="#" class="category-link"><i class="fas fa-home"></i> Ev & Yaşam</a>
+            <a href="#" class="category-link"><i class="fas fa-spa"></i> Kozmetik</a>
+            <a href="#" class="category-link"><i class="fas fa-running"></i> Spor</a>
+            <a href="#" class="category-link"><i class="fas fa-book"></i> Kitap</a>
+        </div>
+    </header>
+
+    <!-- Ana Slider -->
+    <section class="hero-slider">
+        <div class="slider-content" data-aos="fade-up">
+            <h2>Yaz İndirimleri</h2>
+            <p>Tüm ürünlerde %50'ye varan indirimler</p>
+            <div class="slider-buttons">
+                <button class="cta-button primary">Alışverişe Başla</button>
+                <button class="cta-button secondary">Kampanyaları Keşfet</button>
+            </div>
+        </div>
+        <div class="slider-controls">
+            <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <!-- Öne Çıkan Kategoriler -->
+    <section class="featured-categories">
+        <h2 data-aos="fade-up">Popüler Kategoriler</h2>
+        <div class="category-grid">
+            <div class="category-card" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://via.placeholder.com/300x200" alt="Elektronik">
+                <div class="category-overlay">
+                    <h3>Elektronik</h3>
+                    <p>En yeni teknolojik ürünler</p>
+                    <a href="#" class="category-link">Keşfet <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="category-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://via.placeholder.com/300x200" alt="Moda">
+                <div class="category-overlay">
+                    <h3>Moda</h3>
+                    <p>Sezonun trend ürünleri</p>
+                    <a href="#" class="category-link">Keşfet <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="category-card" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://via.placeholder.com/300x200" alt="Ev & Yaşam">
+                <div class="category-overlay">
+                    <h3>Ev & Yaşam</h3>
+                    <p>Eviniz için her şey</p>
+                    <a href="#" class="category-link">Keşfet <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Öne Çıkan Ürünler -->
+    <section class="featured-products">
+        <div class="section-header" data-aos="fade-up">
+            <h2>Öne Çıkan Ürünler</h2>
+            <div class="product-filters">
+                <button class="filter-btn active">Tümü</button>
+                <button class="filter-btn">Yeni Gelenler</button>
+                <button class="filter-btn">Çok Satanlar</button>
+                <button class="filter-btn">İndirimli</button>
+            </div>
+        </div>
+        <div class="product-grid" id="productGrid">
+            <!-- Ürünler JavaScript ile eklenecek -->
+        </div>
+        <div class="load-more" data-aos="fade-up">
+            <button class="load-more-btn">Daha Fazla Göster</button>
+        </div>
+    </section>
+
+    <!-- Kampanyalar -->
+    <section class="campaigns">
+        <div class="campaign-card" data-aos="fade-up">
+            <i class="fas fa-truck"></i>
+            <h3>Ücretsiz Kargo</h3>
+            <p>250 TL ve üzeri alışverişlerde</p>
+            <a href="#" class="campaign-link">Detaylar <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="campaign-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-undo"></i>
+            <h3>İade Garantisi</h3>
+            <p>14 gün içinde ücretsiz iade</p>
+            <a href="#" class="campaign-link">Detaylar <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="campaign-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Güvenli Ödeme</h3>
+            <p>256-bit SSL güvenlik sertifikası</p>
+            <a href="#" class="campaign-link">Detaylar <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="campaign-card" data-aos="fade-up" data-aos-delay="300">
+            <i class="fas fa-headset"></i>
+            <h3>7/24 Destek</h3>
+            <p>Her zaman yanınızdayız</p>
+            <a href="#" class="campaign-link">Detaylar <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Markalar -->
+    <section class="brands">
+        <h2 data-aos="fade-up">Popüler Markalar</h2>
+        <div class="brand-slider">
+            <div class="brand-item" data-aos="fade-up">
+                <img src="https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png" alt="Apple">
+            </div>
+            <div class="brand-item" data-aos="fade-up" data-aos-delay="100">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung">
+            </div>
+            <div class="brand-item" data-aos="fade-up" data-aos-delay="200">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Huawei_Logo.svg" alt="Huawei">
+            </div>
+            <div class="brand-item" data-aos="fade-up" data-aos-delay="300">
+                <img src="https://www.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw3e0e1b1f/JBL_Charge_5_Hero_Black_0296_x3.png" alt="JBL">
+            </div>
+            <div class="brand-item" data-aos="fade-up" data-aos-delay="400">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Xiaomi_logo.svg" alt="Xiaomi">
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="newsletter-content" data-aos="fade-up">
+            <h2>Bültenimize Abone Olun</h2>
+            <p>En yeni ürünler ve kampanyalardan haberdar olun</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="E-posta adresiniz">
+                <button type="submit">Abone Ol</button>
+            </form>
+            <div class="newsletter-benefits">
+                <div class="benefit">
+                    <i class="fas fa-gift"></i>
+                    <span>Özel İndirimler</span>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-bell"></i>
+                    <span>Yeni Ürün Bildirimleri</span>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-tag"></i>
+                    <span>Kampanya Fırsatları</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section" data-aos="fade-up">
+                <h4>Hakkımızda</h4>
+                <ul>
+                    <li><a href="#"><i class="fas fa-building"></i> Şirketimiz</a></li>
+                    <li><a href="#"><i class="fas fa-briefcase"></i> Kariyer</a></li>
+                    <li><a href="#"><i class="fas fa-envelope"></i> İletişim</a></li>
+                    <li><a href="#"><i class="fas fa-blog"></i> Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-section" data-aos="fade-up" data-aos-delay="100">
+                <h4>Yardım</h4>
+                <ul>
+                    <li><a href="#"><i class="fas fa-question-circle"></i> Sıkça Sorulan Sorular</a></li>
+                    <li><a href="#"><i class="fas fa-truck"></i> Kargo Takip</a></li>
+                    <li><a href="#"><i class="fas fa-undo"></i> İade Koşulları</a></li>
+                    <li><a href="#"><i class="fas fa-shield-alt"></i> Gizlilik Politikası</a></li>
+                </ul>
+            </div>
+            <div class="footer-section" data-aos="fade-up" data-aos-delay="200">
+                <h4>Ödeme Yöntemleri</h4>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+                <div class="secure-payment">
+                    <i class="fas fa-lock"></i>
+                    <span>256-bit SSL ile Güvenli Ödeme</span>
+                </div>
+            </div>
+            <div class="footer-section" data-aos="fade-up" data-aos-delay="300">
+                <h4>Bizi Takip Edin</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="app-download">
+                    <a href="#"><img src="https://via.placeholder.com/120x40" alt="App Store"></a>
+                    <a href="#"><img src="https://via.placeholder.com/120x40" alt="Google Play"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ShopNow. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <!-- Mobil Menü -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <button class="close-menu"><i class="fas fa-times"></i></button>
+        </div>
+        <nav class="mobile-nav">
+            <a href="#"><i class="fas fa-home"></i> Ana Sayfa</a>
+            <a href="#"><i class="fas fa-th-large"></i> Kategoriler</a>
+            <a href="#"><i class="fas fa-user"></i> Hesabım</a>
+            <a href="#"><i class="fas fa-shopping-cart"></i> Sepetim</a>
+            <a href="#"><i class="fas fa-heart"></i> Favorilerim</a>
+        </nav>
+    </div>
+
+    <!-- Mobil Menü Butonu -->
+    <button class="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Sepet Sidebar -->
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Sepetim</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Sepet öğeleri JavaScript ile eklenecek -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Toplam:</span>
+                <span id="cartTotal">₺0</span>
+            </div>
+            <button class="checkout-btn">Siparişi Tamamla</button>
+        </div>
+    </div>
+
+    <!-- Favoriler Dropdown -->
+    <div class="favorites-dropdown">
+        <div class="favorites-header">
+            <h3>Favorilerim</h3>
+            <button class="close-favorites"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="favorites-items" id="favoritesItems">
+            <!-- Favori öğeler JavaScript ile eklenecek -->
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // AOS Animasyon Başlatma
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+        // Ürün verileri
+        let products = [];
+
+        window.onload = function () {
+            updateCart();
+            updateFavorites();
+
+            fetch("https://localhost:5134/api/product") // senin API adresin neyse onu yaz
+                .then(res => res.json())
+                .then(data => {
+                    products = data;
+                    displayProducts(products);
+                })
+                .catch(error => console.error("Ürünler alınırken hata:", error));
+        };
+
+        // Sepet ve Favoriler için state
+        let cart = [];
+        let favorites = [];
+
+        // Sepet fonksiyonları
+        function addToCart(productId) {
+            const product = products.find(p => p.productId === productId);
+            if (product) {
+                const existingItem = cart.find(item => item.productId === productId);
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({
+                        ...product,
+                        quantity: 1
+                    });
+                }
+
+                updateCart();
+                showNotification('Ürün sepete eklendi');
+
+                // 🔽 Sipariş kuyruğuna gönder (örnek userId: 1)
+                placeOrder(1, [product]); // sepete eklenen tek ürün gönderiliyor
+            }
+        }
+
+
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCart();
+            showNotification('Ürün sepetten çıkarıldı');
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cartItems');
+            const cartCount = document.querySelector('.cart-count');
+            const cartTotal = document.getElementById('cartTotal');
+            
+            // Sepet sayısını güncelle
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = totalItems;
+
+            // Sepet içeriğini güncelle
+            cartItems.innerHTML = cart.map(item => `
+                <div class="cart-item">
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="cart-item-info">
+                        <h4>${item.name}</h4>
+                        <p>${item.price.toLocaleString()} TL x ${item.quantity}</p>
+                    </div>
+                    <div class="cart-item-actions">
+                        <button onclick="updateQuantity(${item.id}, ${item.quantity - 1})">-</button>
+                        <span>${item.quantity}</span>
+                        <button onclick="updateQuantity(${item.id}, ${item.quantity + 1})">+</button>
+                        <button class="remove-item" onclick="removeFromCart(${item.id})">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+
+            // Toplam tutarı güncelle
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            cartTotal.textContent = `${total.toLocaleString()} TL`;
+        }
+
+        function updateQuantity(productId, newQuantity) {
+            if (newQuantity < 1) {
+                removeFromCart(productId);
+                return;
+            }
+            const item = cart.find(item => item.id === productId);
+            if (item) {
+                item.quantity = newQuantity;
+                updateCart();
+            }
+        }
+
+        // Favoriler fonksiyonları
+        function toggleFavorite(productId) {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                const isFavorite = favorites.some(item => item.id === productId);
+                if (isFavorite) {
+                    favorites = favorites.filter(item => item.id !== productId);
+                    showNotification('Ürün favorilerden çıkarıldı');
+                } else {
+                    favorites.push(product);
+                    showNotification('Ürün favorilere eklendi');
+                }
+                updateFavorites();
+            }
+        }
+
+        function updateFavorites() {
+            const favoritesItems = document.getElementById('favoritesItems');
+            const favoritesCount = document.querySelector('.favorites-count');
+            
+            // Favori sayısını güncelle
+            favoritesCount.textContent = favorites.length;
+
+            // Favoriler içeriğini güncelle
+            favoritesItems.innerHTML = favorites.map(item => `
+                <div class="favorite-item">
+                    <img src="${item.image}" alt="${item.name}">
+                    <div class="favorite-item-info">
+                        <h4>${item.name}</h4>
+                        <p>${item.price.toLocaleString()} TL</p>
+                    </div>
+                    <div class="favorite-item-actions">
+                        <button onclick="addToCart(${item.id})">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <button onclick="toggleFavorite(${item.id})">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Bildirim fonksiyonu
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.textContent = message;
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.remove();
+            }, 3000);
+        }
+
+        // Ürünleri görüntüleme fonksiyonu
+        function displayProducts(productsToShow) {
+            console.log("Görüntülenecek ürünler:", productsToShow); 
+            const productGrid = document.getElementById('productGrid');
+            productGrid.innerHTML = '';
+
+            productsToShow.forEach(product => {
+                const isFavorite = favorites.some(item => item.id === product.id);
+                const productCard = `
+  <div class="product-card" data-aos="fade-up">
+    <div class="product-badge">${product.badge || ''}</div>
+    <div class="product-image">
+      <img src="${product.image || 'https://via.placeholder.com/300x300'}" alt="${product.name}" loading="lazy">
+      <div class="product-actions">
+        <button class="quick-view"><i class="fas fa-eye"></i></button>
+        <button class="add-to-favorites ${isFavorite ? 'active' : ''}" onclick="toggleFavorite(${product.productId})">
+          <i class="fas fa-heart"></i>
+        </button>
+      </div>
+    </div>
+    <div class="product-info">
+      <h3>${product.name}</h3>
+      <p class="product-description">${product.description || ''}</p>
+      <div class="product-rating">
+        ${generateStars(product.rating || 4)}
+        <span>(${product.reviewCount || 25})</span>
+      </div>
+      <p class="price">
+        <span class="old-price">₺${(product.oldPrice || (product.price * 1.2)).toLocaleString()}</span>
+        <span class="current-price">₺${product.price.toLocaleString()}</span>
+      </p>
+      <button class="add-to-cart" onclick="addToCart(${product.productId})">Sepete Ekle</button>
+    </div>
+  </div>
+`;
+
+                productGrid.innerHTML += productCard;
+            });
+        }
+
+        // Yıldız oluşturma fonksiyonu
+        function generateStars(rating) {
+            let stars = '';
+            const fullStars = Math.floor(rating);
+            const hasHalfStar = rating % 1 !== 0;
+
+            for (let i = 0; i < fullStars; i++) {
+                stars += '<i class="fas fa-star"></i>';
+            }
+            if (hasHalfStar) {
+                stars += '<i class="fas fa-star-half-alt"></i>';
+            }
+            const emptyStars = 5 - Math.ceil(rating);
+            for (let i = 0; i < emptyStars; i++) {
+                stars += '<i class="far fa-star"></i>';
+            }
+            return stars;
+        }
+
+        // Arama fonksiyonu
+        function searchProducts() {
+            const searchInput = document.getElementById('searchInput');
+            const searchResults = document.getElementById('searchResults');
+            const searchTerm = searchInput.value.toLowerCase();
+
+            if (searchTerm.length < 2) {
+                searchResults.innerHTML = '';
+                return;
+            }
+
+            const filteredProducts = products.filter(product => 
+                product.name.toLowerCase().includes(searchTerm) || 
+                product.description.toLowerCase().includes(searchTerm)
+            );
+
+            searchResults.innerHTML = '';
+            filteredProducts.forEach(product => {
+                const resultItem = document.createElement('div');
+                resultItem.className = 'search-result-item';
+                resultItem.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <div class="search-result-info">
+                        <h4>${product.name}</h4>
+                        <p>${product.description}</p>
+                        <span class="price">₺${product.price.toLocaleString()}</span>
+                    </div>
+                `;
+                resultItem.onclick = () => {
+                    searchInput.value = product.name;
+                    searchResults.innerHTML = '';
+                    // Ürün detay sayfasına yönlendirme yapılabilir
+                };
+                searchResults.appendChild(resultItem);
+            });
+        }
+
+        // Daha fazla ürün yükleme
+        let currentPage = 1;
+        const productsPerPage = 8;
+
+        function loadMoreProducts() {
+            const start = currentPage * productsPerPage;
+            const end = start + productsPerPage;
+            const moreProducts = products.slice(start, end);
+            
+            if (moreProducts.length > 0) {
+                displayProducts(moreProducts);
+                currentPage++;
+            } else {
+                document.querySelector('.load-more-btn').style.display = 'none';
+            }
+        }
+
+        // Ürün filtreleme
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Aktif buton stilini güncelle
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.textContent.toLowerCase();
+                let filteredProducts;
+
+                switch(filter) {
+                    case 'yeni gelenler':
+                        filteredProducts = products.filter(p => p.badge === 'Yeni');
+                        break;
+                    case 'çok satanlar':
+                        filteredProducts = products.filter(p => p.badge === 'Çok Satan');
+                        break;
+                    case 'indirimli':
+                        filteredProducts = products.filter(p => p.oldPrice > p.price);
+                        break;
+                    default:
+                        filteredProducts = products;
+                }
+
+                displayProducts(filteredProducts);
+            });
+        });
+
+        // Event Listeners
+        document.querySelector('.cart').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('.cart-sidebar').classList.add('active');
+        });
+
+        document.querySelector('.close-cart').addEventListener('click', () => {
+            document.querySelector('.cart-sidebar').classList.remove('active');
+        });
+
+        document.querySelector('.favorites').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelector('.favorites-dropdown').classList.add('active');
+        });
+
+        document.querySelector('.close-favorites').addEventListener('click', () => {
+            document.querySelector('.favorites-dropdown').classList.remove('active');
+        });
+
+        // Sayfa yüklendiğinde
+        window.onload = function () {
+            fetch("http://localhost:5134/api/product")
+
+                .then(res => res.json())
+                .then(data => {
+                    console.log("Gelen ürün verisi:", data); // 👈 Buraya dikkat
+                    products = data;
+                    displayProducts(products);
+                })
+                .catch(error => console.error("Ürünler alınırken hata:", error));
+
+            updateCart();
+            updateFavorites();
+        };
+        function addProduct(newProduct) {
+            fetch("http://localhost:5134/api/product", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(newProduct)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log("Ürün eklendi:", data);
+                })
+                .catch(err => console.error("Ürün eklenemedi:", err));
+        }
+
+        // Örnek kullanım
+        addProduct({ name: "Yeni Ürün", price: 150, image: "https://via.placeholder.com/300" });
+
+        function placeOrder(userId, cartItems) {
+            fetch("http://localhost:5134/api/order", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    userId: userId,
+                    products: cartItems
+                })
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log("Sipariş oluşturuldu:", data);
+                })
+                .catch(err => console.error("Sipariş hatası:", err));
+        }
+
+        function fetchCategories() {
+            fetch("http://localhost:5134/api/category")
+                .then(res => res.json())
+                .then(data => {
+                    console.log("Kategoriler:", data);
+                    // Burada kategori ağacı oluşturulabilir
+                })
+                .catch(err => console.error("Kategori hatası:", err));
+        }
+
+        function fetchUserHistory(userId) {
+            fetch(`http://localhost:5134/api/history/${userId}`)
+                .then(res => res.json())
+                .then(data => {
+                    console.log("Kullanıcı geçmişi:", data);
+                    // UI'da göster
+                })
+                .catch(err => console.error("Geçmiş hatası:", err));
+        }
+
+
+    </script>
+</body>
+</html> 

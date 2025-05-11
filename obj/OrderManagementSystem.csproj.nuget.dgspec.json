@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyapılariSonhali\\OrderManagementSystem.csproj": {}
+    "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProje3\\OrderManagementSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyapılariSonhali\\OrderManagementSystem.csproj": {
+    "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProje3\\OrderManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyapılariSonhali\\OrderManagementSystem.csproj",
+        "projectUniqueName": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProje3\\OrderManagementSystem.csproj",
         "projectName": "OrderManagementSystem",
-        "projectPath": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyapılariSonhali\\OrderManagementSystem.csproj",
+        "projectPath": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProje3\\OrderManagementSystem.csproj",
         "packagesPath": "C:\\Users\\pekta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\veriyapılariSonhali\\obj\\",
+        "outputPath": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProje3\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

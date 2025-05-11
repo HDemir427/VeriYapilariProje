@@ -5,7 +5,8 @@ using OrderManagementSystem.Services;
 namespace OrderManagementSystem.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/product")]
+
     public class ProductsController : ControllerBase
     {
         private readonly IProductService _service;
