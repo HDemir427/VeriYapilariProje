@@ -1,6 +1,6 @@
 ﻿
 using OrderManagementSystem.Data.Entity;
-using OrderManagementSystem.Data.Dto;
+using OrderManagementSystem.Dto;
 using OrderManagementSystem.Services;
 using OrderManagementSystem.Utilities;
 using System;
