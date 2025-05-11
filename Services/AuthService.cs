@@ -1,6 +1,6 @@
 ﻿using Microsoft.IdentityModel.Tokens;
 using OrderManagementSystem.Data.Entity;
-using OrderManagementSystem.Data.Dto;
+using OrderManagementSystem.Dto;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
