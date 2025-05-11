@@ -12,7 +12,6 @@ namespace OrderManagementSystem.Data.Entity
         public int CategoryId { get; set; }
         public string Description { get; set; }
         
-
         public decimal Price { get; set; }
 
         public int StockQuantity { get; set; }
@@ -20,6 +19,7 @@ namespace OrderManagementSystem.Data.Entity
         public int MyProperty { get; set; }
 
         public Category Category { get; set; }
-
+        public int Id { get; internal set; }
+        public string? Image { get; set; }
     }
 }

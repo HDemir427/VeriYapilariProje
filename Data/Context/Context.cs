@@ -20,9 +20,16 @@ namespace OrderManagementSystem.Data.Context
 
         public DbSet<UserHistory> UserHistories{ get; set; }
 
+        public DbSet<Favorite> Favorites { get; set; }
+
+        
         public Context(DbContextOptions<Context> options) : base(options)
         {
 
+        }
+
+        public Context()
+        {
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -34,6 +41,7 @@ namespace OrderManagementSystem.Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
             modelBuilder.ApplyConfiguration(new OrderConfiguration());
             modelBuilder.ApplyConfiguration(new OrderItemConfiguration());
@@ -41,7 +49,7 @@ namespace OrderManagementSystem.Data.Context
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new UserHistoryConfiguration());
-
+          
         }
 
     }

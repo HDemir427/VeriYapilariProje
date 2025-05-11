@@ -109,6 +109,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "YourProjectNamespace.Controllers.FavoriteController",
+    "Method": "AddFavorite",
+    "RelativePath": "api/Favorite",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "YourProjectNamespace.Controllers.FavoriteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "OrderManagementSystem.Api.Controllers.OrderController",
     "Method": "GetAll",
     "RelativePath": "api/Order",
@@ -253,22 +269,6 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "OrderManagementSystem.Controllers.ProductsController",
-    "Method": "AddProduct",
-    "RelativePath": "api/product",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "product",
-        "Type": "OrderManagementSystem.Data.Entity.Product",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
     "ContainingType": "OrderManagementSystem.Api.Controllers.ProductController",
     "Method": "GetProducts",
     "RelativePath": "api/Product",
@@ -313,22 +313,6 @@
         "StatusCode": 200
       }
     ]
-  },
-  {
-    "ContainingType": "OrderManagementSystem.Controllers.ProductsController",
-    "Method": "GetProduct",
-    "RelativePath": "api/product/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
   },
   {
     "ContainingType": "OrderManagementSystem.Api.Controllers.ProductController",
@@ -388,54 +372,6 @@
       {
         "Name": "id",
         "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "OrderManagementSystem.Controllers.ProductsController",
-    "Method": "GetByCategory",
-    "RelativePath": "api/product/category/{name}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "name",
-        "Type": "System.String",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "OrderManagementSystem.Controllers.ProductsController",
-    "Method": "CreateOrder",
-    "RelativePath": "api/product/orders",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "order",
-        "Type": "OrderManagementSystem.Data.Entity.Order",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "OrderManagementSystem.Controllers.ProductsController",
-    "Method": "Search",
-    "RelativePath": "api/product/search/{keyword}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "keyword",
-        "Type": "System.String",
         "IsRequired": true
       }
     ],

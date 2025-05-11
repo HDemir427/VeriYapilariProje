@@ -6,8 +6,7 @@ namespace OrderManagementSystem.Data.Entity
     {
         
         public int UserId { get; set; }
-        
-       
+         
         public string FirstName { get; set; }
 
         public string LastName { get; set; }
@@ -18,6 +17,7 @@ namespace OrderManagementSystem.Data.Entity
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
 
+        public GenderType Gender { get; set; }
         public DateTime? UpdatedAt { get; set; }
 
         public ICollection<Order> Orders { get; set; }

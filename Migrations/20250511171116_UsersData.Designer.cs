@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OrderManagementSystem.Data.Context;
 
@@ -11,9 +12,11 @@ using OrderManagementSystem.Data.Context;
 namespace OrderManagementSystem.Migrations
 {
     [DbContext(typeof(Context))]
-    partial class ContextModelSnapshot : ModelSnapshot
+    [Migration("20250511171116_UsersData")]
+    partial class UsersData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -184,9 +187,6 @@ namespace OrderManagementSystem.Migrations
                     b.Property<int>("Id")
                         .HasColumnType("int");
 
-                    b.Property<string>("Image")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int>("MyProperty")
                         .HasColumnType("int");
 
@@ -290,6 +290,19 @@ namespace OrderManagementSystem.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("UserHistories", (string)null);
+                });
+
+            modelBuilder.Entity("OrderManagementSystem.Data.Entity.UsersData", b =>
+                {
+                    b.Property<int>("UsersDataId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UsersDataId"));
+
+                    b.HasKey("UsersDataId");
+
+                    b.ToTable("UsersDatas");
                 });
 
             modelBuilder.Entity("OrderManagementSystem.Data.Entity.Favorite", b =>
