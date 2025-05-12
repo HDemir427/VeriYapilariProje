@@ -1,3 +1,9 @@
 # Online Alışveriş Platformu Prototipi
-### Projenin Amacı
+## Projenin Amacı
 Bu proje, temel olarak ürün arama/ekleme, kategori filtreleme, sipariş yönetimi ve kullanıcı geçmişi gösterimi gibi işlevlere sahip bir e-ticaret platformu prototipi oluşturmaktadır. Kullanıcılar, sisteme ürün ekleyebilir, ürünleri ID veya anahtar kelime ile hızlıca arayabilir; farklı kategoriler altında ürünleri filtreleyebilir; siparişlerini sıraya ekleyip (FIFO) işleyebilir; ayrıca kullanıcıların işlem geçmişini görüntüleyebilir. Projenin amacı, gerçek bir online alışveriş platformunda yaygın olarak karşılaşılan bu işlemleri, uygun veri yapıları kullanarak verimli bir şekilde modellemektir. Bu sayede ürün kataloguna hızlı erişim, dinamik kategori yönetimi, sıralı sipariş işleme ve kullanıcı geçmişi takibi mümkün hale getirilmiştir.
+## Grup Üyeleri
+032390003  Yekta Ağra
+032390004  Emirhan Berat Beyoğlu
+032390005  Hazar Demir
+032390006  Furkan Akan
+032390009  Mustafa Pektaş
