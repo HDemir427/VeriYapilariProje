@@ -509,3 +509,4 @@ C:\Users\pekta\Desktop\CALISMALAR\C#\VeriYapilariProje3\obj\Debug\net8.0\OrderMa
 C:\Users\pekta\Desktop\CALISMALAR\C#\VeriYapilariProje3\obj\Debug\net8.0\OrderManagementSystem.genruntimeconfig.cache
 C:\Users\pekta\Desktop\CALISMALAR\C#\VeriYapilariProje3\obj\Debug\net8.0\ref\OrderManagementSystem.dll
 C:\Users\pekta\Desktop\CALISMALAR\C#\VeriYapilariProje3\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\pekta\Desktop\CALISMALAR\C#\VeriYapilariProje3\bin\Debug\net8.0\OrderManagementSystem.staticwebassets.runtime.json

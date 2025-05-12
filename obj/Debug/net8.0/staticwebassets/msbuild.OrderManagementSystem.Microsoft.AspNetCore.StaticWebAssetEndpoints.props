@@ -1,0 +1,16 @@
+﻿<Project>
+  <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/OrderManagementSystem/OrderManagementSystem.b5xl7s6fwr.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\OrderManagementSystem.b5xl7s6fwr.bundle.scp.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"b5xl7s6fwr"},{"Name":"integrity","Value":"sha256-DxKpVMbB1Fg2UvQ7IRvWgtywzl9hkA32hU1VZz/pKYw="},{"Name":"label","Value":"_content/OrderManagementSystem/OrderManagementSystem.bundle.scp.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1658"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022DxKpVMbB1Fg2UvQ7IRvWgtywzl9hkA32hU1VZz/pKYw=\u0022"},{"Name":"Last-Modified","Value":"Mon, 12 May 2025 07:04:41 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/OrderManagementSystem/OrderManagementSystem.bundle.scp.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\OrderManagementSystem.b5xl7s6fwr.bundle.scp.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-DxKpVMbB1Fg2UvQ7IRvWgtywzl9hkA32hU1VZz/pKYw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1658"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022DxKpVMbB1Fg2UvQ7IRvWgtywzl9hkA32hU1VZz/pKYw=\u0022"},{"Name":"Last-Modified","Value":"Mon, 12 May 2025 07:04:41 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+  </ItemGroup>
+</Project>

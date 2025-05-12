@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProje3\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\OrderManagementSystem.bundle.scp.css",
+      "PackagePath": "staticwebassets\\OrderManagementSystem.b5xl7s6fwr.bundle.scp.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.OrderManagementSystem.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.OrderManagementSystem.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.OrderManagementSystem.props",
+      "PackagePath": "build\\OrderManagementSystem.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.OrderManagementSystem.props",
+      "PackagePath": "buildMultiTargeting\\OrderManagementSystem.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.OrderManagementSystem.props",
+      "PackagePath": "buildTransitive\\OrderManagementSystem.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

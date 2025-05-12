@@ -1,0 +1,82 @@
+/* _content/OrderManagementSystem/Client/Pages/Hesabim.razor.rz.scp.css */
+.card[b-vv5qdmp9i6] {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 8px;
+}
+
+.card-header[b-vv5qdmp9i6] {
+    border-radius: 8px 8px 0 0 !important;
+    padding: 1.5rem;
+}
+
+.card-body[b-vv5qdmp9i6] {
+    padding: 2rem;
+}
+
+.form-label[b-vv5qdmp9i6] {
+    font-weight: 500;
+    color: #333;
+}
+
+.form-control[b-vv5qdmp9i6] {
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.form-control:focus[b-vv5qdmp9i6] {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+.btn[b-vv5qdmp9i6] {
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary[b-vv5qdmp9i6] {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.btn-primary:hover[b-vv5qdmp9i6] {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.btn-secondary[b-vv5qdmp9i6] {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover[b-vv5qdmp9i6] {
+    background-color: #5c636a;
+    border-color: #565e64;
+}
+
+.alert[b-vv5qdmp9i6] {
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.spinner-border[b-vv5qdmp9i6] {
+    width: 3rem;
+    height: 3rem;
+}
+
+.validation-message[b-vv5qdmp9i6] {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+[b-vv5qdmp9i6] .validation-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+} 

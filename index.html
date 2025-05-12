@@ -40,12 +40,12 @@
                 <div class="search-results" id="searchResults"></div>
             </div>
             <div class="nav-links">
-                <a href="#" class="user-account">
+                <a href="#" id="hesabimLink" class="user-account">
                     <i class="fas fa-user"></i>
                     <span>Hesabım</span>
                     <div class="dropdown-menu">
-                        <a href="#"><i class="fas fa-sign-in-alt"></i> Giriş Yap</a>
-                        <a href="#"><i class="fas fa-user-plus"></i> Üye Ol</a>
+                        <a href="#" onclick="showLoginModal()"><i class="fas fa-sign-in-alt"></i> Giriş Yap</a>
+                        <a href="#" onclick="showRegisterModal()"><i class="fas fa-user-plus"></i> Üye Ol</a>
                         <a href="#"><i class="fas fa-box"></i> Siparişlerim</a>
                         <a href="#"><i class="fas fa-map-marker-alt"></i> Adreslerim</a>
                         <a href="#"><i class="fas fa-cog"></i> Ayarlar</a>
@@ -90,12 +90,36 @@
 
     <!-- Ana Slider -->
     <section class="hero-slider">
-        <div class="slider-content" data-aos="fade-up">
-            <h2>Yaz İndirimleri</h2>
-            <p>Tüm ürünlerde %50'ye varan indirimler</p>
-            <div class="slider-buttons">
-                <button class="cta-button primary">Alışverişe Başla</button>
-                <button class="cta-button secondary">Kampanyaları Keşfet</button>
+        <div class="slider-container">
+            <div class="slide active">
+                <div class="slider-content" data-aos="fade-up">
+                    <h2>Yaz İndirimleri</h2>
+                    <p>Tüm ürünlerde %50'ye varan indirimler</p>
+                    <div class="slider-buttons">
+                        <button class="cta-button primary">Alışverişe Başla</button>
+                        <button class="cta-button secondary">Kampanyaları Keşfet</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slider-content" data-aos="fade-up">
+                    <h2>Yeni Sezon</h2>
+                    <p>En trend ürünler şimdi satışta</p>
+                    <div class="slider-buttons">
+                        <button class="cta-button primary">Yeni Ürünleri Keşfet</button>
+                        <button class="cta-button secondary">Koleksiyonu İncele</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div class="slider-content" data-aos="fade-up">
+                    <h2>Çok Satanlar</h2>
+                    <p>En çok tercih edilen ürünlerimizi keşfedin</p>
+                    <div class="slider-buttons">
+                        <button class="cta-button primary">Çok Satanları Gör</button>
+                        <button class="cta-button secondary">Tüm Ürünler</button>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="slider-controls">
@@ -198,10 +222,10 @@
                 <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung">
             </div>
             <div class="brand-item" data-aos="fade-up" data-aos-delay="200">
-                <img src="https://upload.wikimedia.org/wikipedia/en/0/04/Huawei_Standard_logo.svg" alt="Huawei">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Huawei_Logo.svg" alt="Huawei">
             </div>
             <div class="brand-item" data-aos="fade-up" data-aos-delay="300">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/JBL-Logo.svg" alt="JBL">
+                <img src="https://www.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw3e0e1b1f/JBL_Charge_5_Hero_Black_0296_x3.png" alt="JBL">
             </div>
             <div class="brand-item" data-aos="fade-up" data-aos-delay="400">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Xiaomi_logo.svg" alt="Xiaomi">
@@ -219,7 +243,7 @@
         <nav class="mobile-nav">
             <a href="#"><i class="fas fa-home"></i> Ana Sayfa</a>
             <a href="#"><i class="fas fa-th-large"></i> Kategoriler</a>
-            <a href="#"><i class="fas fa-user"></i> Hesabım</a>
+            <a href="/hesabim"><i class="fas fa-user"></i> Hesabım</a>
             <a href="#"><i class="fas fa-shopping-cart"></i> Sepetim</a>
             <a href="#"><i class="fas fa-heart"></i> Favorilerim</a>
         </nav>
@@ -259,6 +283,76 @@
         </div>
     </div>
 
+    <!-- Giriş Modal -->
+    <div class="login-modal" id="loginModal">
+        <div class="login-container">
+            <div class="login-header">
+                <h2>Giriş Yap</h2>
+                <button class="close-login"><i class="fas fa-times"></i></button>
+            </div>
+            <form id="loginForm" class="login-form">
+                <div class="form-group">
+                    <label for="email">E-posta</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Şifre</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group remember-me">
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Beni Hatırla</label>
+                </div>
+                <button type="submit" class="login-btn">Giriş Yap</button>
+                <div class="form-footer">
+                    <a href="#" class="forgot-password">Şifremi Unuttum</a>
+                    <a href="#" class="register-link" onclick="showRegisterModal()">Hesap Oluştur</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hesap Oluşturma Modal -->
+    <div class="login-modal" id="registerModal">
+        <div class="login-container">
+            <div class="login-header">
+                <h2>Hesap Oluştur</h2>
+                <button class="close-login" onclick="closeRegisterModal()"><i class="fas fa-times"></i></button>
+            </div>
+            <form id="registerForm" class="login-form">
+                <div class="form-group">
+                    <label for="regName">Ad Soyad</label>
+                    <input type="text" id="regName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">E-posta</label>
+                    <input type="email" id="regEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Şifre</label>
+                    <input type="password" id="regPassword" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPasswordConfirm">Şifre Tekrar</label>
+                    <input type="password" id="regPasswordConfirm" name="passwordConfirm" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPhone">Telefon</label>
+                    <input type="tel" id="regPhone" name="phone" required>
+                </div>
+                <div class="form-group remember-me">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Kullanım koşullarını kabul ediyorum</label>
+                </div>
+                <button type="submit" class="login-btn">Hesap Oluştur</button>
+                <div class="form-footer">
+                    <span>Zaten hesabınız var mı?</span>
+                    <a href="#" onclick="showLoginModal()">Giriş Yap</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- JavaScript -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -269,7 +363,7 @@
         });
 
         // Ürün verileri
-        let products = [];
+     
 
         window.onload = function () {
             updateCart();
@@ -386,19 +480,38 @@
         }
 
         function addToFavorites(userId, product) {
+            console.log("addToFavorites çağrıldı:", { userId, product });
+
+            // Kullanıcı ID'sini localStorage'dan al
+            const storedUserId = localStorage.getItem('userId');
+            if (!storedUserId) {
+                showNotification("Lütfen önce giriş yapın!");
+                showLoginModal();
+                return;
+            }
+
+            if (!product || !product.productId) {
+                console.error("Geçersiz ürün bilgisi:", product);
+                showNotification("Geçersiz ürün bilgisi!");
+                return;
+            }
+
             fetch("http://localhost:5134/api/favorite", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
                 },
                 body: JSON.stringify({
-                    userId: userId,
+                    userId: parseInt(storedUserId),
                     productId: product.productId
                 })
             })
             .then(response => {
+                console.log("API yanıtı:", response.status);
                 if (!response.ok) {
                     return response.text().then(text => {
+                        console.error("API hata yanıtı:", text);
                         throw new Error(text || 'Favori eklenirken bir hata oluştu');
                     });
                 }
@@ -406,13 +519,13 @@
             })
             .then(data => {
                 console.log("Favorilere eklendi:", data);
-                favorites.push(product);
-                updateFavorites();
                 showNotification("Ürün favorilere eklendi!");
+                // Favorileri güncelle
+                fetchUserFavorites(parseInt(storedUserId));
             })
             .catch(error => {
                 console.error("Favori ekleme hatası:", error);
-                showNotification(error.message || "Favorilere eklenemedi");
+                showNotification(error.message || "Favorilere eklenemedi.");
             });
         }
 
@@ -434,15 +547,27 @@
         }
 
         function fetchUserFavorites(userId) {
+            if (!userId) {
+                console.error("Kullanıcı ID'si gerekli!");
+                return;
+            }
+
             fetch(`http://localhost:5134/api/favorite/${userId}`)
-            .then(res => res.json())
-            .then(data => {
-                favorites = data;
-                updateFavorites();
-            })
-            .catch(err => {
-                console.error("Favoriler alınırken hata:", err);
-            });
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Favoriler alınırken bir hata oluştu');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log("Kullanıcı favorileri:", data);
+                    favorites = data;
+                    updateFavorites();
+                })
+                .catch(error => {
+                    console.error("Favoriler alınırken hata:", error);
+                    showNotification("Favoriler yüklenemedi.");
+                });
         }
 
         function updateFavorites() {
@@ -644,6 +769,15 @@
             document.querySelector('.favorites-dropdown').classList.remove('active');
         });
 
+        // Hesabım linkine tıklandığında giriş modalını aç
+        const hesabimLink = document.getElementById('hesabimLink');
+        if (hesabimLink) {
+            hesabimLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('loginModal').classList.add('active');
+            });
+        }
+
         // Sayfa yüklendiğinde
         window.onload = function () {
             fetch("http://localhost:5134/api/product")
@@ -702,7 +836,7 @@
                 .then(res => res.json())
                 .then(data => {
                     console.log("Kategoriler:", data);
-                   
+                    
                 })
                 .catch(err => console.error("Kategori hatası:", err));
         }
@@ -739,30 +873,375 @@
             }
         }
         function addToFavorites(userId, product) {
+            console.log("addToFavorites çağrıldı:", { userId, product });
+
+            if (!userId || !product || !product.productId) {
+                console.error("Geçersiz parametreler:", { userId, product });
+                showNotification("Geçersiz kullanıcı veya ürün bilgisi!");
+                return;
+            }
+
             fetch("http://localhost:5134/api/favorite", {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
                 },
                 body: JSON.stringify({
-                    userId: userId,
+                    userId: parseInt(userId),
                     productId: product.productId
                 })
             })
-                .then(res => res.json())
-                .then(data => {
-                    console.log("Favorilere eklendi:", data);
-                    showNotification("Ürün favorilere eklendi!");
-                })
-                .catch(err => {
-                    console.error("Favori ekleme hatası:", err);
-                    showNotification("Favorilere eklenemedi.");
-                });
+            .then(response => {
+                console.log("API yanıtı:", response.status);
+                if (!response.ok) {
+                    return response.text().then(text => {
+                        console.error("API hata yanıtı:", text);
+                        throw new Error(text || 'Favori eklenirken bir hata oluştu');
+                    });
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log("Favorilere eklendi:", data);
+                showNotification("Ürün favorilere eklendi!");
+                // Favorileri güncelle
+                fetchUserFavorites(parseInt(userId));
+            })
+            .catch(error => {
+                console.error("Favori ekleme hatası:", error);
+                showNotification(error.message || "Favorilere eklenemedi.");
+            });
         }
 
+        // Slider Fonksiyonları
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.hero-slider');
+            const slides = slider.querySelectorAll('.slide');
+            const dots = slider.querySelectorAll('.dot');
+            const prevBtn = slider.querySelector('.prev-slide');
+            const nextBtn = slider.querySelector('.next-slide');
+            let currentSlide = 0;
+            let slideInterval;
 
+            // İlk slide'ı aktif yap
+            slides[0].classList.add('active');
+            dots[0].classList.add('active');
 
+            function updateSlides() {
+                slides.forEach((slide, index) => {
+                    slide.classList.remove('active', 'prev', 'next');
+                    dots[index].classList.remove('active');
+                });
 
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+
+                const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+                const nextIndex = (currentSlide + 1) % slides.length;
+
+                slides[prevIndex].classList.add('prev');
+                slides[nextIndex].classList.add('next');
+            }
+
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                updateSlides();
+            }
+
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                updateSlides();
+            }
+
+            function startSlideInterval() {
+                if (slideInterval) {
+                    clearInterval(slideInterval);
+                }
+                slideInterval = setInterval(nextSlide, 5000);
+            }
+
+            // Event Listeners
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                startSlideInterval();
+            });
+
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                startSlideInterval();
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    updateSlides();
+                    startSlideInterval();
+                });
+            });
+
+            // Filtre butonlarını aktif etme fonksiyonu
+            function activateFilterButton(filterText) {
+                const filterButtons = document.querySelectorAll('.filter-btn');
+                filterButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.textContent.trim() === filterText) {
+                        btn.classList.add('active');
+                        // Filtreleme işlemini tetikle
+                        const event = new Event('click');
+                        btn.dispatchEvent(event);
+                    }
+                });
+            }
+
+            // Slider butonlarına tıklama işlevselliği
+            const sliderButtons = document.querySelectorAll('.slider-buttons .cta-button');
+            sliderButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const buttonText = this.textContent.trim();
+                    const isLeftButton = this.classList.contains('primary'); // Sol buton primary class'ına sahip
+                    let targetSection;
+                    let filterToActivate;
+
+                    // Buton metnine ve pozisyonuna göre hedef bölümü ve filtreyi belirle
+                    switch(buttonText) {
+                        case 'Alışverişe Başla':
+                            targetSection = document.querySelector('.featured-products');
+                            filterToActivate = 'Tümü';
+                            break;
+                        case 'Kampanyaları Keşfet':
+                            targetSection = document.querySelector('.featured-products');
+                            filterToActivate = 'İndirimli';
+                            break;
+                        case 'Yeni Ürünleri Keşfet':
+                            targetSection = document.querySelector('.featured-products');
+                            filterToActivate = isLeftButton ? 'Yeni Gelenler' : null;
+                            break;
+                        case 'Koleksiyonu İncele':
+                            targetSection = document.querySelector('.featured-categories');
+                            break;
+                        case 'Çok Satanları Gör':
+                            targetSection = document.querySelector('.featured-products');
+                            filterToActivate = 'Çok Satanlar';
+                            break;
+                        case 'Tüm Ürünler':
+                            targetSection = document.querySelector('.featured-products');
+                            filterToActivate = 'Tümü';
+                            break;
+                    }
+
+                    if (targetSection) {
+                        // Yumuşak kaydırma animasyonu
+                        targetSection.scrollIntoView({ 
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+
+                        // Eğer bir filtre belirlendiyse, onu aktif et
+                        if (filterToActivate) {
+                            setTimeout(() => {
+                                activateFilterButton(filterToActivate);
+                            }, 500); // Kaydırma animasyonu bittikten sonra filtreyi aktif et
+                        }
+                    }
+                });
+            });
+
+            // Dokunmatik kaydırma desteği
+            let touchStartX = 0;
+            let touchEndX = 0;
+
+            slider.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+
+            slider.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                const diff = touchStartX - touchEndX;
+
+                if (Math.abs(diff) > swipeThreshold) {
+                    if (diff > 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                    startSlideInterval();
+                }
+            }
+
+            // Slider'ı başlat
+            updateSlides();
+            startSlideInterval();
+        });
+
+        // Modal Geçiş Fonksiyonları
+        function showRegisterModal() {
+            document.getElementById('loginModal').classList.remove('active');
+            document.getElementById('registerModal').classList.add('active');
+        }
+
+        function showLoginModal() {
+            document.getElementById('registerModal').classList.remove('active');
+            document.getElementById('loginModal').classList.add('active');
+        }
+
+        function closeRegisterModal() {
+            document.getElementById('registerModal').classList.remove('active');
+        }
+
+        // Kayıt Formu İşleme
+        document.getElementById('registerForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('regName').value;
+            const email = document.getElementById('regEmail').value;
+            const password = document.getElementById('regPassword').value;
+            const passwordConfirm = document.getElementById('regPasswordConfirm').value;
+            const phone = document.getElementById('regPhone').value;
+            const terms = document.getElementById('terms').checked;
+
+            // Şifre kontrolü
+            if (password !== passwordConfirm) {
+                showNotification('Şifreler eşleşmiyor!');
+                return;
+            }
+
+            // Kullanım koşulları kontrolü
+            if (!terms) {
+                showNotification('Kullanım koşullarını kabul etmelisiniz!');
+                return;
+            }
+
+            try {
+                const response = await fetch('http://localhost:5134/api/auth/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name,
+                        email,
+                        password,
+                        phone
+                    })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    showNotification('Hesabınız başarıyla oluşturuldu!');
+                    closeRegisterModal();
+                    showLoginModal(); // Başarılı kayıt sonrası giriş ekranına yönlendir
+                } else {
+                    const error = await response.json();
+                    showNotification(error.message || 'Kayıt işlemi başarısız!');
+                }
+            } catch (error) {
+                console.error('Kayıt hatası:', error);
+                showNotification('Bir hata oluştu. Lütfen tekrar deneyin.');
+            }
+        });
+
+        // Modal Event Listeners
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hesabım linkine tıklandığında
+            document.querySelector('.user-account').addEventListener('click', function(e) {
+                e.preventDefault();
+                showLoginModal();
+            });
+
+            // Giriş modalı kapatma butonu
+            document.querySelector('.close-login').addEventListener('click', function() {
+                document.getElementById('loginModal').classList.remove('active');
+            });
+
+            // Giriş formu submit
+            document.getElementById('loginForm').addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
+                const remember = document.getElementById('remember').checked;
+
+                try {
+                    const response = await fetch('http://localhost:5134/api/auth/login', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            email,
+                            password,
+                            remember
+                        })
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        showNotification('Giriş başarılı!');
+                        document.getElementById('loginModal').classList.remove('active');
+                        // Kullanıcı bilgilerini güncelle
+                        updateUserInfo(data);
+                    } else {
+                        const error = await response.json();
+                        showNotification(error.message || 'Giriş başarısız!');
+                    }
+                } catch (error) {
+                    console.error('Giriş hatası:', error);
+                    showNotification('Bir hata oluştu. Lütfen tekrar deneyin.');
+                }
+            });
+        });
+
+        // Kullanıcı bilgilerini güncelleme fonksiyonu
+        function updateUserInfo(userData) {
+            const userAccount = document.querySelector('.user-account');
+            const dropdownMenu = userAccount.querySelector('.dropdown-menu');
+            
+            // Kullanıcı ID'sini localStorage'a kaydet
+            localStorage.setItem('userId', userData.userId);
+            
+            // Giriş yapmış kullanıcı için menüyü güncelle
+            dropdownMenu.innerHTML = `
+                <a href="#"><i class="fas fa-user"></i> ${userData.name}</a>
+                <a href="#"><i class="fas fa-box"></i> Siparişlerim</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Adreslerim</a>
+                <a href="#"><i class="fas fa-cog"></i> Ayarlar</a>
+                <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Çıkış Yap</a>
+            `;
+        }
+
+        // Çıkış yapıldığında localStorage'dan kullanıcı bilgilerini temizle
+        function logout() {
+            // API'ye çıkış isteği gönder
+            fetch('http://localhost:5134/api/auth/logout', {
+                method: 'POST'
+            })
+            .then(() => {
+                // localStorage'dan kullanıcı bilgilerini temizle
+                localStorage.removeItem('userId');
+                
+                showNotification('Çıkış yapıldı');
+                // Menüyü varsayılan haline getir
+                const dropdownMenu = document.querySelector('.dropdown-menu');
+                dropdownMenu.innerHTML = `
+                    <a href="#" onclick="showLoginModal()"><i class="fas fa-sign-in-alt"></i> Giriş Yap</a>
+                    <a href="#" onclick="showRegisterModal()"><i class="fas fa-user-plus"></i> Üye Ol</a>
+                    <a href="#"><i class="fas fa-box"></i> Siparişlerim</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i> Adreslerim</a>
+                    <a href="#"><i class="fas fa-cog"></i> Ayarlar</a>
+                `;
+            })
+            .catch(error => {
+                console.error('Çıkış hatası:', error);
+                showNotification('Çıkış yapılırken bir hata oluştu');
+            });
+        }
     </script>
 </body>
+
 </html> 

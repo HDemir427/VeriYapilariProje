@@ -19,7 +19,6 @@ namespace OrderManagementSystem.Data.Entity
         public int MyProperty { get; set; }
 
         public Category Category { get; set; }
-        public int Id { get; internal set; }
         public string? Image { get; set; }
     }
 }
