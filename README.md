@@ -1,1 +1,1 @@
-# VeriYapilariProje
+# Online Alışveriş Platformu Prototipi
