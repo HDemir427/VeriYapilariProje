@@ -7,6 +7,354 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Order History Dropdown Styles */
+        .order-history-dropdown {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100vh;
+            background: white;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .order-history-dropdown.active {
+            right: 0;
+        }
+
+        .order-history-header {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .order-history-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .close-order-history {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .order-history-items {
+            padding: 20px;
+        }
+
+        .order-history-item {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+
+        .order-info {
+            margin-bottom: 15px;
+        }
+
+        .order-info h4 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+
+        .order-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .order-products {
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .order-product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 4px;
+        }
+
+        .order-product img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .order-product-info {
+            flex: 1;
+        }
+
+        .order-product-info h5 {
+            margin: 0 0 5px 0;
+            font-size: 0.9rem;
+        }
+
+        .order-product-info p {
+            margin: 0;
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        .order-history-footer {
+            padding: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+        }
+
+        .view-all-orders {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .view-all-orders:hover {
+            background: #0056b3;
+        }
+
+        .order-history {
+            position: relative;
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .order-history i {
+            font-size: 1.2rem;
+        }
+
+        /* Sepet Sidebar Styles */
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100vh;
+            background: white;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .cart-sidebar.active {
+            right: 0;
+        }
+
+        .cart-header {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .close-cart {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .cart-items {
+            padding: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            gap: 15px;
+        }
+
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+        .cart-item-info h4 {
+            margin: 0 0 5px 0;
+            font-size: 1rem;
+        }
+
+        .cart-item-info .price {
+            color: #007bff;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .cart-item-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quantity-btn {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            width: 30px;
+            height: 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quantity-btn:hover {
+            background: #e9ecef;
+        }
+
+        .quantity {
+            font-weight: bold;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .remove-item {
+            background: none;
+            border: none;
+            color: #dc3545;
+            cursor: pointer;
+            padding: 5px;
+        }
+
+        .remove-item:hover {
+            color: #c82333;
+        }
+
+        .cart-footer {
+            padding: 20px;
+            border-top: 1px solid #eee;
+            position: sticky;
+            bottom: 0;
+            background: white;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 12px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .checkout-btn:hover {
+            background: #0056b3;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 40px 20px;
+            color: #666;
+        }
+
+        .cart {
+            position: relative;
+            text-decoration: none;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .cart i {
+            font-size: 1.2rem;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #dc3545;
+            color: white;
+            font-size: 0.7rem;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Şifre eşleşme kontrolü için stil */
+        .password-match-message {
+            font-size: 0.8rem;
+            margin-top: 5px;
+            height: 20px;
+        }
+
+        .password-match-message.match {
+            color: #28a745;
+        }
+
+        .password-match-message.mismatch {
+            color: #dc3545;
+        }
+
+        .password-strength {
+            font-size: 0.8rem;
+            margin-top: 5px;
+            height: 20px;
+        }
+
+        .password-strength.weak {
+            color: #dc3545;
+        }
+
+        .password-strength.medium {
+            color: #ffc107;
+        }
+
+        .password-strength.strong {
+            color: #28a745;
+        }
+    </style>
 </head>
 <body>
     <!-- Üst Bilgi Çubuğu -->
@@ -18,12 +366,9 @@
                 <a href="#"><i class="fas fa-map-marker-alt"></i> Mağazalarımız</a>
             </div>
             <div class="top-links">
-                <a href="#"><i class="fas fa-truck"></i> Kargo Takip</a>
-                <a href="#"><i class="fas fa-question-circle"></i> Yardım</a>
-                <select class="language-select">
-                    <option value="tr">Türkçe</option>
-                    <option value="en">English</option>
-                </select>
+               
+                <a href="#" onclick="showHelpModal()"><i class="fas fa-question-circle"></i> Yardım</a>
+                
             </div>
         </div>
     </div>
@@ -56,10 +401,9 @@
                     <span>Sepetim</span>
                     <span class="cart-count">0</span>
                 </a>
-                <a href="#" class="favorites">
-                    <i class="fas fa-heart"></i>
-                    <span>Favorilerim</span>
-                    <span class="favorites-count">0</span>
+                <a href="#" class="order-history">
+                    <i class="fas fa-history"></i>
+                    <span>Siparişlerim</span>
                 </a>
             </div>
         </nav>
@@ -69,62 +413,61 @@
                     <i class="fas fa-bars"></i> Tüm Kategoriler
                 </button>
                 <div class="category-menu">
-                    <a href="#"><i class="fas fa-mobile-alt"></i> Elektronik</a>
-                    <a href="#"><i class="fas fa-tshirt"></i> Moda</a>
-                    <a href="#"><i class="fas fa-home"></i> Ev & Yaşam</a>
-                    <a href="#"><i class="fas fa-spa"></i> Kozmetik</a>
-                    <a href="#"><i class="fas fa-running"></i> Spor</a>
-                    <a href="#"><i class="fas fa-book"></i> Kitap</a>
-                    <a href="#"><i class="fas fa-baby"></i> Anne & Bebek</a>
-                    <a href="#"><i class="fas fa-gamepad"></i> Oyun & Konsol</a>
+                    <a href="#"><i class="fas fa-mobile-alt"></i> Fotoğraf Makinesi</a>
+                    <a href="#"><i class="fas fa-tshirt"></i> Telefon & Tablet</a>
+                    <a href="#"><i class="fas fa-home"></i> Bilgisayar & Laptop</a>
+                    <a href="#"><i class="fas fa-spa"></i> Aksesuar</a>
+                    <a href="#"><i class="fas fa-running"></i> Tablet</a>
+                    <a href="#"><i class="fas fa-book"></i> Monitör</a>
+                    <a href="#"><i class="fas fa-baby"></i> Akıllı Saat & Bileklik</a>
+                    <a href="#"><i class="fas fa-gamepad"></i> Oyun Konsolu</a>
                 </div>
             </div>
-            <a href="#" class="category-link"><i class="fas fa-mobile-alt"></i> Elektronik</a>
-            <a href="#" class="category-link"><i class="fas fa-tshirt"></i> Moda</a>
-            <a href="#" class="category-link"><i class="fas fa-home"></i> Ev & Yaşam</a>
-            <a href="#" class="category-link"><i class="fas fa-spa"></i> Kozmetik</a>
-            <a href="#" class="category-link"><i class="fas fa-running"></i> Spor</a>
-            <a href="#" class="category-link"><i class="fas fa-book"></i> Kitap</a>
+            <a href="#" class="category-link"><i class="fas fa-mobile-alt"></i> Fotoğraf Makinesi</a>
+            <a href="#" class="category-link"><i class="fas fa-tshirt"></i> Telefon & Tablet</a>
+            <a href="#" class="category-link"><i class="fas fa-home"></i> Bilgisayar & Laptop</a>
+            <a href="#" class="category-link"><i class="fas fa-spa"></i> Tablet</a>
+            <a href="#" class="category-link"><i class="fas fa-running"></i> Monitör</a>
+            <a href="#" class="category-link"><i class="fas fa-book"></i> Akıllı Saat & Bileklik</a>
+            <a href="#" class="category-link"><i class="fas fa-book"></i> Oyun Konsolu</a>
         </div>
     </header>
 
-    <!-- Ana Slider -->
+    <!-- Hero Slider -->
     <section class="hero-slider">
         <div class="slider-container">
             <div class="slide active">
-                <div class="slider-content" data-aos="fade-up">
-                    <h2>Yaz İndirimleri</h2>
-                    <p>Tüm ürünlerde %50'ye varan indirimler</p>
+                <div class="slider-content">
+                    <h2>Yaz İndirimleri Başladı!</h2>
+                    <p>Tüm yaz ürünlerinde %50'ye varan indirimler</p>
                     <div class="slider-buttons">
                         <button class="cta-button primary">Alışverişe Başla</button>
-                        <button class="cta-button secondary">Kampanyaları Keşfet</button>
+                        
                     </div>
                 </div>
             </div>
             <div class="slide">
-                <div class="slider-content" data-aos="fade-up">
-                    <h2>Yeni Sezon</h2>
-                    <p>En trend ürünler şimdi satışta</p>
+                <div class="slider-content">
+                    <h2>Yeni Sezon Ürünleri</h2>
+                    <p>En yeni ürünlerimizi keşfedin</p>
                     <div class="slider-buttons">
-                        <button class="cta-button primary">Yeni Ürünleri Keşfet</button>
-                        <button class="cta-button secondary">Koleksiyonu İncele</button>
+                        <button class="cta-button primary">Hemen İncele</button>
                     </div>
                 </div>
             </div>
             <div class="slide">
-                <div class="slider-content" data-aos="fade-up">
-                    <h2>Çok Satanlar</h2>
-                    <p>En çok tercih edilen ürünlerimizi keşfedin</p>
+                <div class="slider-content">
+                    <h2>Özel Teklifler</h2>
+                    <p>Seçili ürünlerde kaçırılmayacak fırsatlar</p>
                     <div class="slider-buttons">
-                        <button class="cta-button primary">Çok Satanları Gör</button>
-                        <button class="cta-button secondary">Tüm Ürünler</button>
+                        <button class="cta-button primary">Fırsatları Yakala</button>
                     </div>
                 </div>
             </div>
         </div>
         <div class="slider-controls">
-            <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
-            <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+            <button type="button" class="prev-slide" aria-label="Önceki slide"><i class="fas fa-chevron-left"></i></button>
+            <button type="button" class="next-slide" aria-label="Sonraki slide"><i class="fas fa-chevron-right"></i></button>
         </div>
         <div class="slider-dots">
             <span class="dot active"></span>
@@ -133,37 +476,36 @@
         </div>
     </section>
 
-    <!-- Öne Çıkan Kategoriler -->
+   <!-- Öne Çıkan Kategoriler -->
     <section class="featured-categories">
         <h2 data-aos="fade-up">Popüler Kategoriler</h2>
         <div class="category-grid">
             <div class="category-card" data-aos="fade-up" data-aos-delay="100">
-                <img src="https://via.placeholder.com/300x200" alt="Elektronik">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/050/025/456/small/highend-wireless-headphones-sleek-black-design-viewed-from-the-side-isolated-on-a-white-background-format-for-clear-detailing-free-photo.jpg" alt="Elektronik">
                 <div class="category-overlay">
                     <h3>Elektronik</h3>
                     <p>En yeni teknolojik ürünler</p>
-                    <a href="#" class="category-link">Keşfet <i class="fas fa-arrow-right"></i></a>
+                    
                 </div>
             </div>
             <div class="category-card" data-aos="fade-up" data-aos-delay="200">
-                <img src="https://via.placeholder.com/300x200" alt="Moda">
+                <img src="https://www.fotoboxpro.com/wp-content/uploads/fotograf-cekimi_0009_saat.jpg" alt="Moda">
                 <div class="category-overlay">
                     <h3>Moda</h3>
                     <p>Sezonun trend ürünleri</p>
-                    <a href="#" class="category-link">Keşfet <i class="fas fa-arrow-right"></i></a>
+                 
                 </div>
             </div>
             <div class="category-card" data-aos="fade-up" data-aos-delay="300">
-                <img src="https://via.placeholder.com/300x200" alt="Ev & Yaşam">
+                <img src="https://cdn.akakce.com/z/belletto/belletto-begonya-sandikli-yatakli.jpg" alt="Ev & Yaşam">
                 <div class="category-overlay">
                     <h3>Ev & Yaşam</h3>
                     <p>Eviniz için her şey</p>
-                    <a href="#" class="category-link">Keşfet <i class="fas fa-arrow-right"></i></a>
+                   
                 </div>
             </div>
         </div>
     </section>
-
     <!-- Öne Çıkan Ürünler -->
     <section class="featured-products">
         <div class="section-header" data-aos="fade-up">
@@ -178,9 +520,7 @@
         <div class="product-grid" id="productGrid">
             <!-- Ürünler JavaScript ile eklenecek -->
         </div>
-        <div class="load-more" data-aos="fade-up">
-            <button class="load-more-btn">Daha Fazla Göster</button>
-        </div>
+      
     </section>
 
     <!-- Kampanyalar -->
@@ -211,29 +551,40 @@
         </div>
     </section>
 
-    <!-- Markalar -->
-    <section class="brands">
-        <h2 data-aos="fade-up">Popüler Markalar</h2>
-        <div class="brand-slider">
-            <div class="brand-item" data-aos="fade-up">
+<!-- Markalar -->
+<section class="brands">
+    <h2 data-aos="fade-up">Popüler Markalar</h2>
+    <div class="brand-slider">
+        <div class="brand-item" data-aos="fade-up">
+            <a href="https://www.apple.com" target="_blank" rel="noopener noreferrer">
                 <img src="https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png" alt="Apple">
-            </div>
-            <div class="brand-item" data-aos="fade-up" data-aos-delay="100">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung">
-            </div>
-            <div class="brand-item" data-aos="fade-up" data-aos-delay="200">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Huawei_Logo.svg" alt="Huawei">
-            </div>
-            <div class="brand-item" data-aos="fade-up" data-aos-delay="300">
-                <img src="https://www.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw3e0e1b1f/JBL_Charge_5_Hero_Black_0296_x3.png" alt="JBL">
-            </div>
-            <div class="brand-item" data-aos="fade-up" data-aos-delay="400">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Xiaomi_logo.svg" alt="Xiaomi">
-            </div>
+            </a>
         </div>
-    </section>
+        <div class="brand-item" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://www.samsung.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung">
+            </a>
+        </div>
+        <div class="brand-item" data-aos="fade-up" data-aos-delay="200">
+            <a href="https://www.huawei.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Huawei_Logo.svg" alt="Huawei">
+            </a>
+        </div>
+        <div class="brand-item" data-aos="fade-up" data-aos-delay="300">
+            <a href="https://www.jbl.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://www.jbl.com/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw3e0e1b1f/JBL_Charge_5_Hero_Black_0296_x3.png" alt="JBL">
+            </a>
+        </div>
+        <div class="brand-item" data-aos="fade-up" data-aos-delay="400">
+            <a href="https://www.mi.com" target="_blank" rel="noopener noreferrer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Xiaomi_logo.svg" alt="Xiaomi">
+            </a>
+        </div>
+    </div>
+</section>
 
-    <!-- Newsletter -->
+
+   
   
     <!-- Mobil Menü -->
     <div class="mobile-menu">
@@ -268,18 +619,21 @@
                 <span>Toplam:</span>
                 <span id="cartTotal">₺0</span>
             </div>
-            <button class="checkout-btn">Siparişi Tamamla</button>
+            <button class="checkout-btn" onclick="checkout()">Siparişi Tamamla</button>
         </div>
     </div>
 
-    <!-- Favoriler Dropdown -->
-    <div class="favorites-dropdown">
-        <div class="favorites-header">
-            <h3>Favorilerim</h3>
-            <button class="close-favorites"><i class="fas fa-times"></i></button>
+    <!-- Sipariş Geçmişi Dropdown -->
+    <div class="order-history-dropdown">
+        <div class="order-history-header">
+            <h3>Sipariş Geçmişim</h3>
+            <button class="close-order-history"><i class="fas fa-times"></i></button>
         </div>
-        <div class="favorites-items" id="favoritesItems">
-            <!-- Favori öğeler JavaScript ile eklenecek -->
+        <div class="order-history-items" id="orderHistoryItems">
+            <!-- Sipariş geçmişi JavaScript ile eklenecek -->
+        </div>
+        <div class="order-history-footer">
+            <button class="view-all-orders">Tüm Siparişleri Gör</button>
         </div>
     </div>
 
@@ -288,9 +642,9 @@
         <div class="login-container">
             <div class="login-header">
                 <h2>Giriş Yap</h2>
-                <button class="close-login"><i class="fas fa-times"></i></button>
+                <button class="close-login" onclick="closeLoginModal()"><i class="fas fa-times"></i></button>
             </div>
-            <form id="loginForm" class="login-form">
+            <form id="loginForm" class="login-form" onsubmit="return false;">
                 <div class="form-group">
                     <label for="email">E-posta</label>
                     <input type="email" id="email" name="email" required>
@@ -303,7 +657,7 @@
                     <input type="checkbox" id="remember" name="remember">
                     <label for="remember">Beni Hatırla</label>
                 </div>
-                <button type="submit" class="login-btn">Giriş Yap</button>
+                <button type="button" class="login-btn" onclick="login()">Giriş Yap</button>
                 <div class="form-footer">
                     <a href="#" class="forgot-password">Şifremi Unuttum</a>
                     <a href="#" class="register-link" onclick="showRegisterModal()">Hesap Oluştur</a>
@@ -321,35 +675,70 @@
             </div>
             <form id="registerForm" class="login-form">
                 <div class="form-group">
-                    <label for="regName">Ad Soyad</label>
-                    <input type="text" id="regName" name="name" required>
+                    <label for="regFirstName">Ad</label>
+                    <input type="text" id="regFirstName" name="firstName" required>
                 </div>
+                
                 <div class="form-group">
                     <label for="regEmail">E-posta</label>
                     <input type="email" id="regEmail" name="email" required>
                 </div>
                 <div class="form-group">
                     <label for="regPassword">Şifre</label>
-                    <input type="password" id="regPassword" name="password" required>
+                    <input type="password" id="regPassword" name="password" minlength="6" required>
+                    <div class="password-strength"></div>
                 </div>
                 <div class="form-group">
                     <label for="regPasswordConfirm">Şifre Tekrar</label>
-                    <input type="password" id="regPasswordConfirm" name="passwordConfirm" required>
+                    <input type="password" id="regPasswordConfirm" name="passwordConfirm" minlength="6" required>
+                    <div class="password-match-message"></div>
                 </div>
-                <div class="form-group">
-                    <label for="regPhone">Telefon</label>
-                    <input type="tel" id="regPhone" name="phone" required>
-                </div>
-                <div class="form-group remember-me">
-                    <input type="checkbox" id="terms" name="terms" required>
-                    <label for="terms">Kullanım koşullarını kabul ediyorum</label>
-                </div>
-                <button type="submit" class="login-btn">Hesap Oluştur</button>
+                
+                <button type="submit" class="login-btn" id="registerSubmitBtn">Hesap Oluştur</button>
                 <div class="form-footer">
                     <span>Zaten hesabınız var mı?</span>
                     <a href="#" onclick="showLoginModal()">Giriş Yap</a>
                 </div>
             </form>
+        </div>
+    </div>
+
+    <!-- Yardım Modal -->
+    <div class="help-modal" id="helpModal">
+        <div class="help-container">
+            <div class="help-header">
+                <h2>Yardım Merkezi</h2>
+                <button class="close-help" onclick="closeHelpModal()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="help-content">
+                <h3>Sık Sorulan Sorular</h3>
+                <div class="faq-item">
+                    <h4>Siparişim ne zaman elime ulaşır?</h4>
+                    <p>Siparişleriniz, ödeme onayından sonra 1-3 iş günü içinde kargoya verilir. Kargo firmasına teslim edildikten sonra 1-3 iş günü içinde adresinize ulaştırılır.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>İade işlemlerini nasıl yapabilirim?</h4>
+                    <p>Ürünlerinizi 14 gün içinde, kullanılmamış ve orijinal ambalajında olmak şartıyla iade edebilirsiniz. İade işlemi için "Siparişlerim" sayfasından ilgili siparişi seçip "İade Talebi Oluştur" butonuna tıklayabilirsiniz.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Ödeme seçenekleri nelerdir?</h4>
+                    <p>Kredi kartı, banka kartı, havale/EFT ve kapıda ödeme seçeneklerimiz mevcuttur. Kredi kartına 12 taksit imkanı sunulmaktadır.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Kargo takibini nasıl yapabilirim?</h4>
+                    <p>Siparişiniz kargoya verildikten sonra size SMS ve e-posta ile bilgilendirme yapılır. "Siparişlerim" sayfasından siparişinizin durumunu ve kargo takip numarasını görebilirsiniz.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Ürün garantisi nedir?</h4>
+                    <p>Tüm ürünlerimiz 2 yıl garantilidir. Garanti kapsamındaki ürünlerde teknik servis hizmeti sunulmaktadır. Detaylı bilgi için ürün sayfasındaki garanti bilgilerini inceleyebilirsiniz.</p>
+                </div>
+                <h3>İletişim Bilgileri</h3>
+                <ul>
+                    <li>Telefon: +90 212 123 45 67</li>
+                    <li>E-posta: destek@shopnow.com</li>
+                    <li>Çalışma Saatleri: Hafta içi 09:00 - 18:00</li>
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -362,14 +751,31 @@
             once: true
         });
 
+        // Yardım Modalı Aç/Kapat Fonksiyonları
+        function showHelpModal() {
+            document.getElementById('helpModal').classList.add('active');
+        }
+        function closeHelpModal() {
+            document.getElementById('helpModal').classList.remove('active');
+        }
+
+        // Yardım linkine tıklama
+        const helpLink = document.querySelector('.top-links a[href="#"]:not([onclick])');
+        if (helpLink) {
+            helpLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                showHelpModal();
+            });
+        }
+
         // Ürün verileri
      
 
         window.onload = function () {
             updateCart();
-            updateFavorites();
+            updateOrderHistory();
 
-            fetch("https://localhost:5134/api/product") // senin API adresin neyse onu yaz
+            fetch("http://localhost:5134/api/product") // senin API adresin neyse onu yaz
                 .then(res => res.json())
                 .then(data => {
                     products = data;
@@ -378,9 +784,9 @@
                 .catch(error => console.error("Ürünler alınırken hata:", error));
         };
 
-        // Sepet ve Favoriler için state
+        // Sepet ve Sipariş Geçmişi için state
         let cart = [];
-        let favorites = [];
+        let orderHistory = [];
 
         // Sepet fonksiyonları
         function addToCart(productId) {
@@ -395,17 +801,13 @@
                         quantity: 1
                     });
                 }
-
                 updateCart();
                 showNotification('Ürün sepete eklendi');
-
-                r
             }
         }
 
-
         function removeFromCart(productId) {
-            cart = cart.filter(item => item.id !== productId);
+            cart = cart.filter(item => item.productId !== productId);
             updateCart();
             showNotification('Ürün sepetten çıkarıldı');
         }
@@ -420,18 +822,24 @@
             cartCount.textContent = totalItems;
 
             // Sepet içeriğini güncelle
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<div class="empty-cart">Sepetiniz boş</div>';
+                cartTotal.textContent = '₺0';
+                return;
+            }
+
             cartItems.innerHTML = cart.map(item => `
                 <div class="cart-item">
-                    <img src="${item.image}" alt="${item.name}">
+                    <img src="${item.image || 'https://via.placeholder.com/300x300'}" alt="${item.name}">
                     <div class="cart-item-info">
                         <h4>${item.name}</h4>
-                        <p>${item.price.toLocaleString()} TL x ${item.quantity}</p>
+                        <p class="price">₺${item.price.toLocaleString()}</p>
                     </div>
                     <div class="cart-item-actions">
-                        <button onclick="updateQuantity(${item.id}, ${item.quantity - 1})">-</button>
-                        <span>${item.quantity}</span>
-                        <button onclick="updateQuantity(${item.id}, ${item.quantity + 1})">+</button>
-                        <button class="remove-item" onclick="removeFromCart(${item.id})">
+                        <button class="quantity-btn" onclick="updateQuantity(${item.productId}, ${item.quantity - 1})">-</button>
+                        <span class="quantity">${item.quantity}</span>
+                        <button class="quantity-btn" onclick="updateQuantity(${item.productId}, ${item.quantity + 1})">+</button>
+                        <button class="remove-item" onclick="removeFromCart(${item.productId})">
                             <i class="fas fa-trash"></i>
                         </button>
                     </div>
@@ -440,7 +848,7 @@
 
             // Toplam tutarı güncelle
             const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-            cartTotal.textContent = `${total.toLocaleString()} TL`;
+            cartTotal.textContent = `₺${total.toLocaleString()}`;
         }
 
         function updateQuantity(productId, newQuantity) {
@@ -448,150 +856,60 @@
                 removeFromCart(productId);
                 return;
             }
-            const item = cart.find(item => item.id === productId);
+            const item = cart.find(item => item.productId === productId);
             if (item) {
                 item.quantity = newQuantity;
                 updateCart();
             }
         }
 
-        // Favoriler fonksiyonları
-        function toggleFavorite(productId) {
-            console.log("Toggle favorite çağrıldı, productId:", productId);
-            
-            const product = products.find(p => p.productId === productId);
-            if (!product) {
-                console.error("Ürün bulunamadı:", productId);
-                showNotification("Ürün bulunamadı!");
-                return;
-            }
-
-            console.log("Bulunan ürün:", product);
-            const isFavorite = favorites.some(item => item.productId === productId);
-            console.log("Favori durumu:", isFavorite);
-
-            if (isFavorite) {
-                // Favorilerden kaldır
-                removeFromFavorites(1, productId); // 1 is example userId
-            } else {
-                // Favorilere ekle
-                addToFavorites(1, product); // 1 is example userId
-            }
-        }
-
-        function addToFavorites(userId, product) {
-            console.log("addToFavorites çağrıldı:", { userId, product });
-
-            // Kullanıcı ID'sini localStorage'dan al
-            const storedUserId = localStorage.getItem('userId');
-            if (!storedUserId) {
-                showNotification("Lütfen önce giriş yapın!");
-                showLoginModal();
-                return;
-            }
-
-            if (!product || !product.productId) {
-                console.error("Geçersiz ürün bilgisi:", product);
-                showNotification("Geçersiz ürün bilgisi!");
-                return;
-            }
-
-            fetch("http://localhost:5134/api/favorite", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Accept": "application/json"
-                },
-                body: JSON.stringify({
-                    userId: parseInt(storedUserId),
-                    productId: product.productId
-                })
-            })
-            .then(response => {
-                console.log("API yanıtı:", response.status);
-                if (!response.ok) {
-                    return response.text().then(text => {
-                        console.error("API hata yanıtı:", text);
-                        throw new Error(text || 'Favori eklenirken bir hata oluştu');
-                    });
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log("Favorilere eklendi:", data);
-                showNotification("Ürün favorilere eklendi!");
-                // Favorileri güncelle
-                fetchUserFavorites(parseInt(storedUserId));
-            })
-            .catch(error => {
-                console.error("Favori ekleme hatası:", error);
-                showNotification(error.message || "Favorilere eklenemedi.");
-            });
-        }
-
-        function removeFromFavorites(userId, productId) {
-            fetch(`http://localhost:5134/api/favorite/${userId}/${productId}`, {
-                method: "DELETE"
-            })
-            .then(res => {
-                if (res.ok) {
-                    favorites = favorites.filter(item => item.productId !== productId);
-                    updateFavorites();
-                    showNotification("Ürün favorilerden çıkarıldı!");
-                }
-            })
-            .catch(err => {
-                console.error("Favori silme hatası:", err);
-                showNotification("Favorilerden çıkarılamadı.");
-            });
-        }
-
-        function fetchUserFavorites(userId) {
+        // Sipariş Geçmişi fonksiyonları
+        function fetchOrderHistory(userId) {
             if (!userId) {
                 console.error("Kullanıcı ID'si gerekli!");
                 return;
             }
 
-            fetch(`http://localhost:5134/api/favorite/${userId}`)
+            fetch(`http://localhost:5134/api/order/${userId}`)
                 .then(response => {
                     if (!response.ok) {
-                        throw new Error('Favoriler alınırken bir hata oluştu');
+                        throw new Error('Sipariş geçmişi alınırken bir hata oluştu');
                     }
                     return response.json();
                 })
                 .then(data => {
-                    console.log("Kullanıcı favorileri:", data);
-                    favorites = data;
-                    updateFavorites();
+                    console.log("Kullanıcı sipariş geçmişi:", data);
+                    orderHistory = data;
+                    updateOrderHistory();
                 })
                 .catch(error => {
-                    console.error("Favoriler alınırken hata:", error);
-                    showNotification("Favoriler yüklenemedi.");
+                    console.error("Sipariş geçmişi alınırken hata:", error);
+                    showNotification("Sipariş geçmişi yüklenemedi.");
                 });
         }
 
-        function updateFavorites() {
-            const favoritesItems = document.getElementById('favoritesItems');
-            const favoritesCount = document.querySelector('.favorites-count');
+        function updateOrderHistory() {
+            const orderHistoryItems = document.getElementById('orderHistoryItems');
             
-            // Favori sayısını güncelle
-            favoritesCount.textContent = favorites.length;
-
-            // Favoriler içeriğini güncelle
-            favoritesItems.innerHTML = favorites.map(item => `
-                <div class="favorite-item">
-                    <img src="${item.image || 'https://via.placeholder.com/300x300'}" alt="${item.name}">
-                    <div class="favorite-item-info">
-                        <h4>${item.name}</h4>
-                        <p>${item.price.toLocaleString()} TL</p>
+            // Sipariş geçmişi içeriğini güncelle
+            orderHistoryItems.innerHTML = orderHistory.map(order => `
+                <div class="order-history-item">
+                    <div class="order-info">
+                        <h4>Sipariş #${order.orderId}</h4>
+                        <p>Tarih: ${new Date(order.orderDate).toLocaleDateString()}</p>
+                        <p>Toplam: ${order.totalAmount.toLocaleString()} TL</p>
+                        <p>Durum: ${order.status}</p>
                     </div>
-                    <div class="favorite-item-actions">
-                        <button onclick="addToCart(${item.productId})">
-                            <i class="fas fa-shopping-cart"></i>
-                        </button>
-                        <button onclick="toggleFavorite(${item.productId})">
-                            <i class="fas fa-heart"></i>
-                        </button>
+                    <div class="order-products">
+                        ${order.products.map(product => `
+                            <div class="order-product">
+                                <img src="${product.image || 'https://via.placeholder.com/300x300'}" alt="${product.name}">
+                                <div class="order-product-info">
+                                    <h5>${product.name}</h5>
+                                    <p>${product.price.toLocaleString()} TL x ${product.quantity}</p>
+                                </div>
+                            </div>
+                        `).join('')}
                     </div>
                 </div>
             `).join('');
@@ -616,34 +934,30 @@
             productGrid.innerHTML = '';
 
             productsToShow.forEach(product => {
-                const isFavorite = favorites.some(item => item.id === product.id);
                 const productCard = `
-  <div class="product-card" data-aos="fade-up">
-    <div class="product-badge">${product.badge || ''}</div>
-    <div class="product-image">
-      <img src="${product.image || 'https://via.placeholder.com/300x300'}" alt="${product.name}" loading="lazy">
-      <div class="product-actions">
-        <button class="quick-view"><i class="fas fa-eye"></i></button>
-        <button class="add-to-favorites ${isFavorite ? 'active' : ''}" onclick="toggleFavorite(${product.productId})">
-          <i class="fas fa-heart"></i>
-        </button>
-      </div>
-    </div>
-    <div class="product-info">
-      <h3>${product.name}</h3>
-      <p class="product-description">${product.description || ''}</p>
-      <div class="product-rating">
-        ${generateStars(product.rating || 4)}
-        <span>(${product.reviewCount || 25})</span>
-      </div>
-      <p class="price">
-        <span class="old-price">₺${(product.oldPrice || (product.price * 1.2)).toLocaleString()}</span>
-        <span class="current-price">₺${product.price.toLocaleString()}</span>
-      </p>
-      <button class="add-to-cart" onclick="addToCart(${product.productId})">Sepete Ekle</button>
-    </div>
-  </div>
-`;
+                    <div class="product-card" data-aos="fade-up">
+                        <div class="product-badge">${product.badge || ''}</div>
+                        <div class="product-image">
+                            <img src="${product.image || 'https://via.placeholder.com/300x300'}" alt="${product.name}" loading="lazy">
+                            <div class="product-actions">
+                                <button class="quick-view"><i class="fas fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>${product.name}</h3>
+                            <p class="product-description">${product.description || ''}</p>
+                            <div class="product-rating">
+                                ${generateStars(product.rating || 4)}
+                                <span>(${product.reviewCount || 25})</span>
+                            </div>
+                            <p class="price">
+                                <span class="old-price">₺${(product.oldPrice || (product.price * 1.2)).toLocaleString()}</span>
+                                <span class="current-price">₺${product.price.toLocaleString()}</span>
+                            </p>
+                            <button class="add-to-cart" onclick="addToCart(${product.productId})">Sepete Ekle</button>
+                        </div>
+                    </div>
+                `;
 
                 productGrid.innerHTML += productCard;
             });
@@ -668,6 +982,7 @@
             return stars;
         }
 
+        
         // Arama fonksiyonu
         function searchProducts() {
             const searchInput = document.getElementById('searchInput');
@@ -760,13 +1075,13 @@
             document.querySelector('.cart-sidebar').classList.remove('active');
         });
 
-        document.querySelector('.favorites').addEventListener('click', (e) => {
+        document.querySelector('.order-history').addEventListener('click', (e) => {
             e.preventDefault();
-            document.querySelector('.favorites-dropdown').classList.add('active');
+            document.querySelector('.order-history-dropdown').classList.add('active');
         });
 
-        document.querySelector('.close-favorites').addEventListener('click', () => {
-            document.querySelector('.favorites-dropdown').classList.remove('active');
+        document.querySelector('.close-order-history').addEventListener('click', () => {
+            document.querySelector('.order-history-dropdown').classList.remove('active');
         });
 
         // Hesabım linkine tıklandığında giriş modalını aç
@@ -790,11 +1105,10 @@
                 .catch(error => console.error("Ürünler alınırken hata:", error));
 
             fetchCategories();       
-            fetchUserHistory(1);     
-            fetchUserFavorites(1);  
+            fetchOrderHistory(1);     
 
             updateCart();
-            updateFavorites();
+            updateOrderHistory();
         };
         function addProduct(newProduct) {
             fetch("http://localhost:5134/api/product", {
@@ -810,8 +1124,6 @@
                 })
                 .catch(err => console.error("Ürün eklenemedi:", err));
         }
-
-
 
         function placeOrder(userId, cartItems) {
             fetch("http://localhost:5134/api/order", {
@@ -833,85 +1145,46 @@
 
         function fetchCategories() {
             fetch("http://localhost:5134/api/category")
-                .then(res => res.json())
+                .then(res => {
+                    if (!res.ok) {
+                        throw new Error('Kategoriler alınırken bir hata oluştu');
+                    }
+                    return res.json();
+                })
                 .then(data => {
                     console.log("Kategoriler:", data);
-                    
                 })
-                .catch(err => console.error("Kategori hatası:", err));
+                .catch(err => {
+                    console.error("Kategori hatası:", err);
+                    showNotification("Kategoriler yüklenemedi.");
+                });
         }
 
-        function fetchUserHistory(userId) {
-            fetch(`http://localhost:5134/api/history/${userId}`)
-                .then(res => res.json())
-                .then(data => {
-                    console.log("Kullanıcı geçmişi:", data);
-                    
-                })
-                .catch(err => console.error("Geçmiş hatası:", err));
-        }
-        function addToCart(productId) {
-            const product = products.find(p => p.productId === productId);
-            if (product) {
-                const existingItem = cart.find(item => item.productId === productId);
-                if (existingItem) {
-                    existingItem.quantity += 1;
-                } else {
-                    cart.push({
-                        ...product,
-                        quantity: 1
-                    });
-                }
-
-
-                fetchCategories();      
-                fetchUserHistory(1);     
-
-                updateCart();
-                showNotification('Ürün sepete eklendi');
-
-            }
-        }
-        function addToFavorites(userId, product) {
-            console.log("addToFavorites çağrıldı:", { userId, product });
-
-            if (!userId || !product || !product.productId) {
-                console.error("Geçersiz parametreler:", { userId, product });
-                showNotification("Geçersiz kullanıcı veya ürün bilgisi!");
-                return;
-            }
-
-            fetch("http://localhost:5134/api/favorite", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Accept": "application/json"
-                },
-                body: JSON.stringify({
-                    userId: parseInt(userId),
-                    productId: product.productId
-                })
-            })
-            .then(response => {
-                console.log("API yanıtı:", response.status);
-                if (!response.ok) {
-                    return response.text().then(text => {
-                        console.error("API hata yanıtı:", text);
-                        throw new Error(text || 'Favori eklenirken bir hata oluştu');
-                    });
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log("Favorilere eklendi:", data);
-                showNotification("Ürün favorilere eklendi!");
-                // Favorileri güncelle
-                fetchUserFavorites(parseInt(userId));
-            })
-            .catch(error => {
-                console.error("Favori ekleme hatası:", error);
-                showNotification(error.message || "Favorilere eklenemedi.");
-            });
+        function updateOrderHistory() {
+            const orderHistoryItems = document.getElementById('orderHistoryItems');
+            
+            // Sipariş geçmişi içeriğini güncelle
+            orderHistoryItems.innerHTML = orderHistory.map(order => `
+                <div class="order-history-item">
+                    <div class="order-info">
+                        <h4>Sipariş #${order.orderId}</h4>
+                        <p>Tarih: ${new Date(order.orderDate).toLocaleDateString()}</p>
+                        <p>Toplam: ${order.totalAmount.toLocaleString()} TL</p>
+                        <p>Durum: ${order.status}</p>
+                    </div>
+                    <div class="order-products">
+                        ${order.products.map(product => `
+                            <div class="order-product">
+                                <img src="${product.image || 'https://via.placeholder.com/300x300'}" alt="${product.name}">
+                                <div class="order-product-info">
+                                    <h5>${product.name}</h5>
+                                    <p>${product.price.toLocaleString()} TL x ${product.quantity}</p>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            `).join('');
         }
 
         // Slider Fonksiyonları
@@ -1009,11 +1282,11 @@
                             targetSection = document.querySelector('.featured-products');
                             filterToActivate = 'Tümü';
                             break;
-                        case 'Kampanyaları Keşfet':
+                        case 'Detayları Gör':
                             targetSection = document.querySelector('.featured-products');
                             filterToActivate = 'İndirimli';
                             break;
-                        case 'Yeni Ürünleri Keşfet':
+                        case 'Hemen İncele':
                             targetSection = document.querySelector('.featured-products');
                             filterToActivate = isLeftButton ? 'Yeni Gelenler' : null;
                             break;
@@ -1080,121 +1353,39 @@
         });
 
         // Modal Geçiş Fonksiyonları
+        function showLoginModal() {
+            document.getElementById('registerModal').classList.remove('active');
+            document.getElementById('loginModal').classList.add('active');
+        }
+
         function showRegisterModal() {
             document.getElementById('loginModal').classList.remove('active');
             document.getElementById('registerModal').classList.add('active');
         }
 
-        function showLoginModal() {
-            document.getElementById('registerModal').classList.remove('active');
-            document.getElementById('loginModal').classList.add('active');
+        function closeLoginModal() {
+            document.getElementById('loginModal').classList.remove('active');
         }
 
         function closeRegisterModal() {
             document.getElementById('registerModal').classList.remove('active');
         }
 
-        // Kayıt Formu İşleme
-        document.getElementById('registerForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            const name = document.getElementById('regName').value;
-            const email = document.getElementById('regEmail').value;
-            const password = document.getElementById('regPassword').value;
-            const passwordConfirm = document.getElementById('regPasswordConfirm').value;
-            const phone = document.getElementById('regPhone').value;
-            const terms = document.getElementById('terms').checked;
-
-            // Şifre kontrolü
-            if (password !== passwordConfirm) {
-                showNotification('Şifreler eşleşmiyor!');
-                return;
-            }
-
-            // Kullanım koşulları kontrolü
-            if (!terms) {
-                showNotification('Kullanım koşullarını kabul etmelisiniz!');
-                return;
-            }
-
-            try {
-                const response = await fetch('http://localhost:5134/api/auth/register', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        name,
-                        email,
-                        password,
-                        phone
-                    })
-                });
-
-                if (response.ok) {
-                    const data = await response.json();
-                    showNotification('Hesabınız başarıyla oluşturuldu!');
-                    closeRegisterModal();
-                    showLoginModal(); // Başarılı kayıt sonrası giriş ekranına yönlendir
-                } else {
-                    const error = await response.json();
-                    showNotification(error.message || 'Kayıt işlemi başarısız!');
-                }
-            } catch (error) {
-                console.error('Kayıt hatası:', error);
-                showNotification('Bir hata oluştu. Lütfen tekrar deneyin.');
-            }
-        });
-
-        // Modal Event Listeners
+        // Event Listeners
         document.addEventListener('DOMContentLoaded', function() {
-            // Hesabım linkine tıklandığında
-            document.querySelector('.user-account').addEventListener('click', function(e) {
-                e.preventDefault();
-                showLoginModal();
-            });
-
             // Giriş modalı kapatma butonu
             document.querySelector('.close-login').addEventListener('click', function() {
-                document.getElementById('loginModal').classList.remove('active');
+                closeLoginModal();
             });
 
             // Giriş formu submit
-            document.getElementById('loginForm').addEventListener('submit', async function(e) {
+            document.getElementById('loginForm').addEventListener('submit', function(e) {
                 e.preventDefault();
-                
-                const email = document.getElementById('email').value;
-                const password = document.getElementById('password').value;
-                const remember = document.getElementById('remember').checked;
-
-                try {
-                    const response = await fetch('http://localhost:5134/api/auth/login', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json'
-                        },
-                        body: JSON.stringify({
-                            email,
-                            password,
-                            remember
-                        })
-                    });
-
-                    if (response.ok) {
-                        const data = await response.json();
-                        showNotification('Giriş başarılı!');
-                        document.getElementById('loginModal').classList.remove('active');
-                        // Kullanıcı bilgilerini güncelle
-                        updateUserInfo(data);
-                    } else {
-                        const error = await response.json();
-                        showNotification(error.message || 'Giriş başarısız!');
-                    }
-                } catch (error) {
-                    console.error('Giriş hatası:', error);
-                    showNotification('Bir hata oluştu. Lütfen tekrar deneyin.');
-                }
+                login();
             });
+
+            // Kayıt formu submit
+            document.getElementById('registerForm').addEventListener('submit', register);
         });
 
         // Kullanıcı bilgilerini güncelleme fonksiyonu
@@ -1215,31 +1406,333 @@
             `;
         }
 
+        
         // Çıkış yapıldığında localStorage'dan kullanıcı bilgilerini temizle
         function logout() {
-            // API'ye çıkış isteği gönder
-            fetch('http://localhost:5134/api/auth/logout', {
-                method: 'POST'
+            const token = localStorage.getItem("token");
+            
+            fetch("http://localhost:5134/api/auth/logout", {
+                method: "POST",
+                headers: {
+                    "Authorization": `Bearer ${token}`
+                }
             })
             .then(() => {
-                // localStorage'dan kullanıcı bilgilerini temizle
-                localStorage.removeItem('userId');
+                // LocalStorage'dan kullanıcı bilgilerini temizle
+                localStorage.removeItem("token");
+                localStorage.removeItem("userId");
+                localStorage.removeItem("userName");
                 
-                showNotification('Çıkış yapıldı');
-                // Menüyü varsayılan haline getir
-                const dropdownMenu = document.querySelector('.dropdown-menu');
-                dropdownMenu.innerHTML = `
-                    <a href="#" onclick="showLoginModal()"><i class="fas fa-sign-in-alt"></i> Giriş Yap</a>
-                    <a href="#" onclick="showRegisterModal()"><i class="fas fa-user-plus"></i> Üye Ol</a>
-                    <a href="#"><i class="fas fa-box"></i> Siparişlerim</a>
-                    <a href="#"><i class="fas fa-map-marker-alt"></i> Adreslerim</a>
-                    <a href="#"><i class="fas fa-cog"></i> Ayarlar</a>
-                `;
+                showNotification("Çıkış yapıldı");
+                window.location.reload();
+            })
+            .catch(err => {
+                console.error("Logout error:", err);
+                showNotification("Çıkış yapılırken bir hata oluştu");
+            });
+        
+        }
+        
+        // Checkout fonksiyonu
+        function checkout() {
+            const userId = localStorage.getItem('userId');
+            if (!userId) {
+                showNotification('Lütfen önce giriş yapın!');
+                showLoginModal();
+                return;
+            }
+
+            if (cart.length === 0) {
+                showNotification('Sepetiniz boş!');
+                return;
+            }
+
+            // Sipariş oluştur
+            const order = {
+                userId: parseInt(userId),
+                products: cart.map(item => ({
+                    productId: item.productId,
+                    quantity: item.quantity,
+                    price: item.price
+                })),
+                totalAmount: cart.reduce((sum, item) => sum + (item.price * item.quantity), 0)
+            };
+
+            // API'ye sipariş gönder
+            fetch('http://localhost:5134/api/order', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(order)
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Sipariş oluşturulamadı');
+                }
+                return response.json();
+            })
+            .then(data => {
+                showNotification('Siparişiniz başarıyla oluşturuldu!');
+                cart = []; // Sepeti temizle
+                updateCart();
+                document.querySelector('.cart-sidebar').classList.remove('active');
             })
             .catch(error => {
-                console.error('Çıkış hatası:', error);
-                showNotification('Çıkış yapılırken bir hata oluştu');
+                console.error('Sipariş hatası:', error);
+                showNotification('Sipariş oluşturulurken bir hata oluştu!');
             });
+        }
+
+        // Şifre kontrolü için fonksiyonlar
+        function checkPasswordStrength(password) {
+            const strengthDiv = document.querySelector('.password-strength');
+            if (!password) {
+                strengthDiv.textContent = '';
+                return false;
+            }
+
+            let strength = 0;
+            if (password.length >= 8) strength++;
+            if (password.match(/[a-z]/) && password.match(/[A-Z]/)) strength++;
+            if (password.match(/\d/)) strength++;
+            if (password.match(/[^a-zA-Z\d]/)) strength++;
+
+            switch(strength) {
+                case 0:
+                case 1:
+                    strengthDiv.textContent = 'Zayıf şifre';
+                    strengthDiv.className = 'password-strength weak';
+                    return false;
+                case 2:
+                case 3:
+                    strengthDiv.textContent = 'Orta güçlükte şifre';
+                    strengthDiv.className = 'password-strength medium';
+                    return true;
+                case 4:
+                    strengthDiv.textContent = 'Güçlü şifre';
+                    strengthDiv.className = 'password-strength strong';
+                    return true;
+            }
+        }
+
+        function checkPasswordMatch() {
+            const password = document.getElementById('regPassword').value;
+            const confirmPassword = document.getElementById('regPasswordConfirm').value;
+            const messageDiv = document.querySelector('.password-match-message');
+            const submitBtn = document.getElementById('registerSubmitBtn');
+
+            if (!password || !confirmPassword) {
+                messageDiv.textContent = '';
+                messageDiv.className = 'password-match-message';
+                submitBtn.disabled = true;
+                return;
+            }
+
+            if (password === confirmPassword) {
+                messageDiv.textContent = 'Şifreler eşleşiyor';
+                messageDiv.className = 'password-match-message match';
+                submitBtn.disabled = false;
+            } else {
+                messageDiv.textContent = 'Şifreler eşleşmiyor';
+                messageDiv.className = 'password-match-message mismatch';
+                submitBtn.disabled = true;
+            }
+        }
+
+        // Event listener'ları ekle
+        document.addEventListener('DOMContentLoaded', function() {
+            const passwordInput = document.getElementById('regPassword');
+            const confirmPasswordInput = document.getElementById('regPasswordConfirm');
+
+            passwordInput.addEventListener('input', function() {
+                checkPasswordStrength(this.value);
+                checkPasswordMatch();
+            });
+
+            confirmPasswordInput.addEventListener('input', checkPasswordMatch);
+        });
+
+        function register() {
+            console.log("Register function called"); // Debug log
+
+            const firstName = document.getElementById("regFirstName").value;
+            const lastName = document.getElementById("regLastName").value;
+            const email = document.getElementById("regEmail").value;
+            const password = document.getElementById("regPassword").value;
+            const passwordConfirm = document.getElementById("regPasswordConfirm").value;
+
+            console.log("Form values:", { firstName, lastName, email }); // Debug log
+
+            // Boş alan kontrolü
+            if (!firstName || !lastName || !email || !password || !passwordConfirm) {
+                showNotification("Lütfen tüm alanları doldurun!");
+                return;
+            }
+
+            // E-posta formatı kontrolü
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showNotification("Geçerli bir e-posta adresi girin!");
+                return;
+            }
+
+            // Şifre uzunluk kontrolü
+            if (password.length < 6) {
+                showNotification("Şifre en az 6 karakter olmalıdır!");
+                return;
+            }
+
+            // Şifre kontrolü
+            if (password !== passwordConfirm) {
+                showNotification("Şifreler eşleşmiyor!");
+                return;
+            }
+
+            // Submit butonunu devre dışı bırak
+            const submitBtn = document.getElementById('registerSubmitBtn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Kayıt Yapılıyor...';
+
+            const registerData = {
+                firstName,
+                lastName,
+                email,
+                password
+            };
+
+            console.log("Sending register request with data:", registerData); // Debug log
+
+            fetch("http://localhost:5134/api/auth/register", {
+                method: "POST",
+                headers: { 
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(registerData)
+            })
+            .then(res => {
+                console.log("Response status:", res.status); // Debug log
+                if (!res.ok) {
+                    return res.text().then(text => {
+                        throw new Error(text || 'Kayıt işlemi başarısız oldu');
+                    });
+                }
+                return res.json();
+            })
+            .then(data => {
+                console.log("Register success:", data); // Debug log
+                
+                // Token ve kullanıcı bilgilerini sakla
+                if (data.token) {
+                    localStorage.setItem("token", data.token);
+                    localStorage.setItem("userId", data.userId);
+                    localStorage.setItem("userName", data.name);
+                    
+                    showNotification("Hesabınız başarıyla oluşturuldu!");
+                    closeRegisterModal();
+                    showLoginModal();
+                } else {
+                    throw new Error('Kayıt işlemi başarısız: Token alınamadı');
+                }
+            })
+            .catch(err => {
+                console.error("Register error:", err); // Debug log
+                showNotification(err.message || "Bir hata oluştu. Lütfen tekrar deneyin.");
+            })
+            .finally(() => {
+                // Submit butonunu tekrar aktif et
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Hesap Oluştur';
+            });
+        }
+
+        // Login fonksiyonu
+        function login() {
+            console.log("Login function called"); // Debug log
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            console.log("Login attempt for email:", email); // Debug log
+
+            // Boş alan kontrolü
+            if (!email || !password) {
+                showNotification("Lütfen tüm alanları doldurun!");
+                return;
+            }
+
+            // E-posta formatı kontrolü
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showNotification("Geçerli bir e-posta adresi girin!");
+                return;
+            }
+
+            const loginData = {
+                email,
+                password
+            };
+
+            console.log("Sending login request with data:", loginData); // Debug log
+
+            fetch("http://localhost:5134/api/auth/login", {
+                method: "POST",
+                headers: { 
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(loginData)
+            })
+            .then(res => {
+                console.log("Login response status:", res.status); // Debug log
+                console.log("Login response headers:", Object.fromEntries(res.headers.entries())); // Debug log
+                if (!res.ok) {
+                    return res.text().then(text => {
+                        console.error("Login error response:", text); // Hata detayını logla
+                        throw new Error(text || 'Giriş başarısız');
+                    });
+                }
+                return res.json();
+            })
+            .then(data => {
+                console.log("Login success data:", data); // Debug log
+                
+                // Token ve kullanıcı bilgilerini sakla
+                if (data.token) {
+                    localStorage.setItem("token", data.token);
+                    localStorage.setItem("userId", data.userId);
+                    localStorage.setItem("userName", data.name);
+                    
+                    showNotification("Giriş başarılı!");
+                    closeLoginModal();
+                    
+                    // Kullanıcı menüsünü güncelle
+                    updateUserMenu(data.name);
+                    
+                    // Sayfayı yenile
+                    window.location.reload();
+                } else {
+                    throw new Error('Giriş başarısız: Token alınamadı');
+                }
+            })
+            .catch(err => {
+                console.error("Login error:", err); // Debug log
+                showNotification(err.message || "Giriş yapılamadı. Lütfen bilgilerinizi kontrol edin.");
+            });
+        }
+
+        function updateUserMenu(userName) {
+            const userAccount = document.querySelector('.user-account');
+            const dropdownMenu = userAccount.querySelector('.dropdown-menu');
+            
+            dropdownMenu.innerHTML = `
+                <a href="#"><i class="fas fa-user"></i> ${userName}</a>
+                <a href="#"><i class="fas fa-box"></i> Siparişlerim</a>
+                <a href="#"><i class="fas fa-map-marker-alt"></i> Adreslerim</a>
+                <a href="#"><i class="fas fa-cog"></i> Ayarlar</a>
+                <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Çıkış Yap</a>
+            `;
         }
     </script>
 </body>

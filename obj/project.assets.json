@@ -4812,11 +4812,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProje5\\OrderManagementSystem.csproj",
+      "projectUniqueName": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\OrderManagementSystem.csproj",
       "projectName": "OrderManagementSystem",
-      "projectPath": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProje5\\OrderManagementSystem.csproj",
+      "projectPath": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\OrderManagementSystem.csproj",
       "packagesPath": "C:\\Users\\pekta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProje5\\obj\\",
+      "outputPath": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

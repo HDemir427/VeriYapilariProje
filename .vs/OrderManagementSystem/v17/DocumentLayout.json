@@ -1,7 +1,60 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProje5\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyapilariprojeson\\data\\entity\\userhistory .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\entity\\userhistory .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyapilariprojeson\\data\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\entity\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyapilariprojeson\\data\\entity\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\entity\\orderitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyapilariprojeson\\data\\entity\\orderqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\entity\\orderqueue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyapilariprojeson\\data\\entity\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\entity\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyapilariprojeson\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyapilariprojeson\\data\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyapilariprojeson\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyapilariprojeson\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyapilariprojeson\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyapilariprojeson\\services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:services\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyapilariprojeson\\migrations\\20250511174047_usersdata2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:migrations\\20250511174047_usersdata2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|c:\\users\\pekta\\desktop\\calismalar\\c#\\veriyapilariprojeson\\data\\seeder\\dataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB42A7AC-9C89-44D9-8766-C674675E35B3}|OrderManagementSystem.csproj|solutionrelative:data\\seeder\\dataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +62,168 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderItem.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Data\\Entity\\OrderItem.cs",
+              "RelativeDocumentMoniker": "Data\\Entity\\OrderItem.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Data\\Entity\\OrderItem.cs",
+              "RelativeToolTip": "Data\\Entity\\OrderItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T22:52:06.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderQueue.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Data\\Entity\\OrderQueue.cs",
+              "RelativeDocumentMoniker": "Data\\Entity\\OrderQueue.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Data\\Entity\\OrderQueue.cs",
+              "RelativeToolTip": "Data\\Entity\\OrderQueue.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T22:35:30.473Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Data\\Entity\\Product.cs",
+              "RelativeDocumentMoniker": "Data\\Entity\\Product.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Data\\Entity\\Product.cs",
+              "RelativeToolTip": "Data\\Entity\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T22:35:29.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Data\\Entity\\User.cs",
+              "RelativeDocumentMoniker": "Data\\Entity\\User.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Data\\Entity\\User.cs",
+              "RelativeToolTip": "Data\\Entity\\User.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T22:35:27.684Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserHistory .cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Data\\Entity\\UserHistory .cs",
+              "RelativeDocumentMoniker": "Data\\Entity\\UserHistory .cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Data\\Entity\\UserHistory .cs",
+              "RelativeToolTip": "Data\\Entity\\UserHistory .cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T22:35:25.29Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAowCYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T21:15:13.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Data\\Dtos\\UserDto.cs",
+              "RelativeDocumentMoniker": "Data\\Dtos\\UserDto.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Data\\Dtos\\UserDto.cs",
+              "RelativeToolTip": "Data\\Dtos\\UserDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T21:14:01.071Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Services\\UserService.cs",
+              "RelativeToolTip": "Services\\UserService.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAQwEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T21:13:26.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "Services\\IUserService.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Services\\IUserService.cs",
+              "RelativeToolTip": "Services\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T21:13:15.973Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Services\\AuthService.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Services\\AuthService.cs",
+              "RelativeToolTip": "Services\\AuthService.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAowBYAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T21:12:32.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Services\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Services\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Services\\IAuthService.cs",
+              "RelativeToolTip": "Services\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T21:12:27.799Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20250511174047_UsersData2.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Migrations\\20250511174047_UsersData2.cs",
+              "RelativeDocumentMoniker": "Migrations\\20250511174047_UsersData2.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Migrations\\20250511174047_UsersData2.cs",
+              "RelativeToolTip": "Migrations\\20250511174047_UsersData2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T21:12:22.382Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "DataSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Data\\Seeder\\DataSeeder.cs",
+              "RelativeDocumentMoniker": "Data\\Seeder\\DataSeeder.cs",
+              "ToolTip": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\Data\\Seeder\\DataSeeder.cs",
+              "RelativeToolTip": "Data\\Seeder\\DataSeeder.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBkAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T19:57:07.446Z"
             }
           ]
         }

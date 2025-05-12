@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7GwgytF+JLU=",
+  "dgSpecHash": "awXmqSKInds=",
   "success": true,
-  "projectFilePath": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProje5\\OrderManagementSystem.csproj",
+  "projectFilePath": "C:\\Users\\pekta\\Desktop\\CALISMALAR\\C#\\VeriYapilariProjeSon\\OrderManagementSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pekta\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\pekta\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
