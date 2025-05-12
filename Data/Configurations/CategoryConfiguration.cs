@@ -14,9 +14,9 @@ namespace OrderManagementSystem.Data.Configurations
             
             builder.Property(x=> x.Name).HasMaxLength(100).IsRequired();
             
-            builder.Property(x => x.Description).HasMaxLength(250).IsRequired();
+          
             
-            builder.Property(x => x.Title).HasMaxLength(100).IsRequired();
+           
 
         }
     }

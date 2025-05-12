@@ -1,9 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OrderManagementSystem.Data.Context;
 using OrderManagementSystem.Data.Entity;
+using OrderManagementSystem.Data.Seeder;
 using OrderManagementSystem.Mapping;
 using OrderManagementSystem.Services;
 using OrderManagementSystem.Utilities;
+using OrderManagementSystem.Data.Context;  
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -61,6 +63,7 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 app.UseCors("AllowAll");
 
+DataSeeder.SeedDatabase(app.Services);
 // 🔹 Middleware sırası
 app.UseCors("AllowAll");
 app.UseRouting();
